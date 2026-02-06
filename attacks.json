@@ -3,19 +3,12 @@
     "sql-attack" : {
         "category" : "Web",
         "risk" : "High",
-
         "description" : "A SQL injection attack consists of insertions or 'injection' of a SQL query via the input data from the client to the application.",
-
         "impact" : "A successful SQL injection exploit can read sensitive data from databases, modify database data (Insert/Update/Delete), execute admin operations on the database and in some cases issue commands to the operating system.",
-
         "in simple words" : "An SQL attack allows an attacker to input things that shouldn't be allow, bypassing the security of the database", 
-
         "cwe_id" : "CWE-89",
-
         "remediation" : "Installing the latest security software updates can help prevent these attacks, attackers can take advantage outdated software. Give least privilege to the accounts that connect to the database. Implement input validation in the code to sanitize the request made to the database",
-
         "references" : ["https://cwe.mitre.org/data/definitions/89.html", "https://owasp.org/www-community/attacks/SQL_Injection", "https://www.nebrcentre.co.uk/your-website-could-be-vulnerable-to-a-sql-injection-attack/" ],
-
         "learn more" : "https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/README.md"
     }
 }
