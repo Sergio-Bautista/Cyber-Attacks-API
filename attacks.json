@@ -9,6 +9,17 @@
         "cwe_id" : "CWE-89",
         "remediation" : "Installing the latest security software updates can help prevent these attacks, attackers can take advantage outdated software. Give least privilege to the accounts that connect to the database. Implement input validation in the code to sanitize the request made to the database",
         "references" : ["https://cwe.mitre.org/data/definitions/89.html", "https://owasp.org/www-community/attacks/SQL_Injection", "https://www.nebrcentre.co.uk/your-website-could-be-vulnerable-to-a-sql-injection-attack/" ],
-        "learn more" : "https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/README.md"
+        "learn more" : ["https://github.com/swisskyrepo/PayloadsAllTheThings"]
+    },
+    "cross-site-scripting" : {
+        "category" : "Web",
+        "risk" : "High",
+        "description" : "A cross site scripting attack is a type of injection, in which an attacker injects malicious scripts are injected into otherwise benign and trusted website. XSS occurs when an attacker uses a web application to send malicious code, generally in the form of a browser side script.",
+        "impact" : "When a cross site scripting attack is successful, it allows the attacker to access any cookies stored in the browser, session tokens, or other sensitive information in the browser.",
+        "in simple words" : "An attacker sends malicious code to the end user's browser, the browser has no idea that the code should not be trusted and has no way to know it, therefore it executes the script.",
+        "cwe_id" : "CWE-79",
+        "remediation" : "Encoding the different data that you receive, this data will be encoded depending on what type is it, HTML or JS data are encoded differently, you should encode the different data accordingly. Validating the input when you first receive it from the user, validating the data should work by blocking the invalid input the user tries to use.",
+        "references" : ["https://owasp.org/www-community/attacks/xss/", "https://portswigger.net/web-security/cross-site-scripting"],
+        "learn more" : ["https://github.com/Learn-by-doing/xss"]
     }
 }
