@@ -134,7 +134,7 @@
     },
     "spear-phishing" : {
         "name" : "", 
-        "category" : "",
+        "category" : "Social Engineering",
         "risk" : "",
         "description" : "",
         "impact" : "",
