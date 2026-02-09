@@ -37,8 +37,8 @@
         "learn more" : ["https://github.com/Marcokorcak/Cross-Site-Request-Forgery-CSRF"]
     },
     "server-side-request-forgery": {
-        "name" : "", 
-        "category" : "",
+        "name" : "Server Side Request Forgery (SSRF)", 
+        "category" : "API & Server",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -49,8 +49,8 @@
         "learn more" : ""
     },
     "command-injection" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Command Injection", 
+        "category" : "Web",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -61,8 +61,8 @@
         "learn more" : ""
     },
     "directory-traversal" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Directory Traversal", 
+        "category" : "Web",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -73,8 +73,8 @@
         "learn more" : ""
     },
     "brute-force-attack" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Brute Force Attack", 
+        "category" : "Authentication & Authorization",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -85,8 +85,8 @@
         "learn more" : ""
     },
     "credential-stuffing" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Credential Stuffing", 
+        "category" : "Authentication & Authorization",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -97,8 +97,8 @@
         "learn more" : ""
     },
     "session-hijacking" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Session Hijacking", 
+        "category" : "Authentication & Authorization",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -109,8 +109,8 @@
         "learn more" : ""
     },
     "broken-access-control" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Broken Access Control", 
+        "category" : "Authentication & Authorization",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -121,7 +121,7 @@
         "learn more" : ""
     },
     "phishing" : {
-        "name" : "", 
+        "name" : "Phishing", 
         "category" : "Social Engineering",
         "risk" : "",
         "description" : "",
@@ -133,7 +133,7 @@
         "learn more" : ""
     },
     "spear-phishing" : {
-        "name" : "", 
+        "name" : "Spear Phishing", 
         "category" : "Social Engineering",
         "risk" : "",
         "description" : "",
@@ -145,8 +145,8 @@
         "learn more" : ""
     },
     "pretexting" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Pretexting", 
+        "category" : "Social Engineering",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -157,8 +157,8 @@
         "learn more" : ""
     },
     "keylogger": {
-        "name" : "", 
-        "category" : "",
+        "name" : "Keylogger", 
+        "category" : "Malware Based",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -169,8 +169,8 @@
         "learn more" : ""
     },
     "ransomware" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Ransomware", 
+        "category" : "Malware Based",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -181,8 +181,8 @@
         "learn more" : ""
     },
     "trojan-horses" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Trojan Horse", 
+        "category" : "Malware Based",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -192,9 +192,9 @@
         "references" : "",
         "learn more" : ""
     },
-    "spy-ware": {
-        "name" : "", 
-        "category" : "",
+    "spyware": {
+        "name" : "Spyware", 
+        "category" : "Malware Based",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -205,8 +205,8 @@
         "learn more" : ""
     },
     "man-in-the-middle" :{
-        "name" : "", 
-        "category" : "",
+        "name" : "Man-In-The-Middle (MITM)", 
+        "category" : "Network",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -217,8 +217,8 @@
         "learn more" : ""
     },
     "dns-spoofing" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "DNS Spoofing", 
+        "category" : "Network",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -229,8 +229,8 @@
         "learn more" : ""
     },
     "arp-spoofing" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "ARP Spoofing", 
+        "category" : "Network",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -241,8 +241,8 @@
         "learn more" : ""
     },
     "packet-sniffing" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Packet Sniffing", 
+        "category" : "Network",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -253,8 +253,8 @@
         "learn more" : ""
     },
     "denial-of-service" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Denial Of Service (DoS)", 
+        "category" : "Denial Of Service",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -265,8 +265,8 @@
         "learn more" : ""
     },
     "distributed-denial-of-service" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Distributed Denial Of Service", 
+        "category" : "Denial Of Service",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -277,8 +277,8 @@
         "learn more" : ""
     },
     "insider-threat" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Insider Threat", 
+        "category" : "Insider & Physical",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -289,8 +289,8 @@
         "learn more" : ""
     },
     "shoulder-surfing" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Shoulder Surfing", 
+        "category" : "Insider & Physical",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -301,7 +301,7 @@
         "learn more" : ""
     },
     "zero-day-exploit" : {
-        "name" : "", 
+        "name" : "Zero Day Exploit", 
         "category" : "",
         "risk" : "",
         "description" : "",
@@ -313,7 +313,7 @@
         "learn more" : ""
     },
     "supply-chain-attack" : {
-        "name" : "", 
+        "name" : "Supply Chain", 
         "category" : "",
         "risk" : "",
         "description" : "",
@@ -324,8 +324,9 @@
         "references" : "",
         "learn more" : ""
     },
-    "hash-collision-attack" : {"name" : "", 
-        "category" : "",
+    "hash-collision-attack" : {
+        "name" : "Hash Collision", 
+        "category" : "Cryptography & Encryption",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -336,8 +337,8 @@
         "learn more" : ""
     }, 
     "password-cracking" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Password Cracking", 
+        "category" : "Cryptography & Encryption",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -348,8 +349,8 @@
         "learn more" : ""
     }, 
     "ssl-striping" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "SSL Striping", 
+        "category" : "Cryptography & Encryption",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -360,8 +361,8 @@
         "learn more" : ""
     }, 
     "downgrade-attack" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Downgrade", 
+        "category" : "Cryptography & Encryption",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -372,8 +373,8 @@
         "learn more" : ""
     }, 
     "evil-twin" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Evil Twin", 
+        "category" : "Wireless",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -384,8 +385,8 @@
         "learn more" : ""
     }, 
     "wi-fi-deauthentication" :{
-        "name" : "", 
-        "category" : "",
+        "name" : "WI-FI Deauthentication", 
+        "category" : "Wireless",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -396,8 +397,8 @@
         "learn more" : ""
     }, 
     "buffer-overflow" :{
-        "name" : "", 
-        "category" : "",
+        "name" : "Buffer Overflow", 
+        "category" : "Software & Code",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -408,8 +409,8 @@
         "learn more" : ""
     }, 
     "race-condition-attack" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Race Condition", 
+        "category" : "Software & Code",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -420,8 +421,8 @@
         "learn more" : ""
     }, 
     "code-injection" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "Code Injection", 
+        "category" : "Software & Code",
         "risk" : "",
         "description" : "",
         "impact" : "",
