@@ -7,7 +7,7 @@
         "description" : "A SQL injection attack consists of insertions or 'injection' of a SQL query via the input data from the client to the application.",
         "impact" : "A successful SQL injection exploit can read sensitive data from databases, modify database data (Insert/Update/Delete), execute admin operations on the database and in some cases issue commands to the operating system.",
         "in simple words" : "An SQL attack allows an attacker to input things that shouldn't be allow, bypassing the security of the database", 
-        "cwe_id" : "CWE-89",
+        "cwe_id" : ["CWE-89"],
         "remediation" : "Installing the latest security software updates can help prevent these attacks, attackers can take advantage outdated software. Give least privilege to the accounts that connect to the database. Implement input validation in the code to sanitize the request made to the database",
         "references" : ["https://cwe.mitre.org/data/definitions/89.html", "https://owasp.org/www-community/attacks/SQL_Injection", "https://www.nebrcentre.co.uk/your-website-could-be-vulnerable-to-a-sql-injection-attack/" ],
         "learn more" : ["https://github.com/swisskyrepo/PayloadsAllTheThings"]
@@ -19,7 +19,7 @@
         "description" : "A cross site scripting attack is a type of injection, in which an attacker injects malicious scripts are injected into otherwise benign and trusted website. XSS occurs when an attacker uses a web application to send malicious code, generally in the form of a browser side script.",
         "impact" : "When a cross site scripting attack is successful, it allows the attacker to access any cookies stored in the browser, session tokens, or other sensitive information in the browser.",
         "in simple words" : "An attacker sends malicious code to the end user's browser, the browser has no idea that the code should not be trusted and has no way to know it, therefore it executes the script.",
-        "cwe_id" : "CWE-79",
+        "cwe_id" : ["CWE-79"],
         "remediation" : "Encoding the different data that you receive, this data will be encoded depending on what type is it, HTML or JS data are encoded differently, you should encode the different data accordingly. Validating the input when you first receive it from the user, validating the data should work by blocking the invalid input the user tries to use.",
         "references" : ["https://owasp.org/www-community/attacks/xss/", "https://portswigger.net/web-security/cross-site-scripting"],
         "learn more" : ["https://github.com/Learn-by-doing/xss"]
@@ -31,7 +31,7 @@
         "description" : "Cross site request forgery is an attack that forces an end user to execute unwanted actions on a web application in which the user is already authenticated.",
         "impact" : "With a little help of social engineering, an attacker may trick the user into executing code for the web application they are authenticated. The impact can range from, changing the user's email or password, with an administrative account, it can compromise entire web applications.", 
         "in simple words" : "When a user is authenticated in a web application, an attacker might send the user a link with an action to perform, if the user clicks the email link (such as 'cute cat pictures)' they can perform an action in the website with the privilege level they have without they even realizing it.", 
-        "cwe_id" : "CWE-352",
+        "cwe_id" : ["CWE-352"],
         "remediation" : "The best defense against CSRF is a way to distinguish between legitimate and forged HTTP request. Changing the way the web application manage cookies and CSRF tokens", 
         "references" : ["https://owasp.org/www-community/attacks/csrf", "https://www.contrastsecurity.com/glossary/csrf"],
         "learn more" : ["https://github.com/Marcokorcak/Cross-Site-Request-Forgery-CSRF"]
@@ -43,7 +43,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["918"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -55,7 +55,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-77", "CWE-78"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -67,7 +67,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-22"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -79,7 +79,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-307"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -91,7 +91,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-307"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -103,7 +103,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-384", "CWE-613"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -115,7 +115,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-284",  "CWE-862"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -127,7 +127,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-451"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -139,7 +139,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-451"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -151,7 +151,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-290"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -163,7 +163,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-532", "CWE-250"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -175,7 +175,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-502", "CWE-269"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -187,7 +187,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-912"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -199,7 +199,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-200"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -211,7 +211,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-300", "319"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -223,7 +223,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-345"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -235,7 +235,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-290"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -247,7 +247,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-319"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -259,7 +259,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-400"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -271,7 +271,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-400"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -283,7 +283,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-250"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -295,7 +295,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-522"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -307,7 +307,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-937"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -319,7 +319,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-494"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -331,7 +331,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-327"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -343,7 +343,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-521", "CWE-522"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -355,7 +355,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-319"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -367,7 +367,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-757"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -379,7 +379,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-300"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -391,7 +391,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-294"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -403,7 +403,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-120"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -415,7 +415,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-362"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
@@ -427,7 +427,7 @@
         "description" : "",
         "impact" : "",
         "in simple words" : "",
-        "cwe_id" : "",
+        "cwe_id" : ["CWE-94"],
         "remediation" : "",
         "references" : "",
         "learn more" : ""
