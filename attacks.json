@@ -61,40 +61,40 @@
         "learn more" : "https://github.com/PortSwigger/command-injection-attacker"
     },
     "directory-traversal" : {
-        "name" : "Directory Traversal", 
+        "name" : "Directory/path Traversal", 
         "category" : "Web",
         "risk" : "",
-        "description" : "",
-        "impact" : "",
-        "in simple words" : "",
+        "description" : "A path traversal attack (also known as directory traversal) aims to access files and directories that are stored outside the web root folder. By manipulating variables that reference files with 'dot-dot-slash (../)' sequences and its variations or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system including application source code or configuration and critical system files. It should be noted that access to files is limited by system operational access control (such as in the case of locked or in-use files on the Microsoft Windows operating system). This attack is also known as 'dot-dot-slash', 'directory traversal', 'directory climbing' and 'backtracking'",
+        "impact" : "A path traversal or dictionary attack can allow an attacker to access files and resources outside of the authorized directory. By modifying the URL path an attacker can change the hierarchy of the directory the application redirects them to. ",
+        "in my own words" : "An attacker might access different directories in your application that you don't want them to access. When someone visits your application, they might bypass the default directory you want your application to send them by inserting something like '../' to change the directory one level above and see the structure of the application. ",
         "cwe_id" : ["CWE-22"],
-        "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "remediation" : ["Work without user input when using file system calls", "Validate the user's input by only accepting known good", "Before doing an API call with user input, first 'normalize' the input data"],
+        "references" : ["https://owasp.org/www-community/attacks/Path_Traversal"],
+        "learn more" : ["https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Directory%20Traversal/README.md"]
     },
     "brute-force-attack" : {
         "name" : "Brute Force Attack", 
         "category" : "Authentication & Authorization",
         "risk" : "",
-        "description" : "",
-        "impact" : "",
-        "in simple words" : "",
+        "description" : "A brute force attack can manifest itself in many different ways, but primarily consists in an attacker configuring predetermined values, making requests to a server using those values, and then analyzing the response. For the sake of efficiency, an attacker may use a dictionary attack (with or without mutations) or a traditional brute-force attack (with given classes of characters e.g.: alphanumeric, special, case (in)sensitive). Considering a given method, number of tries, efficiency of the system which conducts the attack, and estimated efficiency of the system which is attacked the attacker is able to calculate approximately how long it will take to submit all chosen predetermined values.",
+        "impact" : "If a brute force attack successful, the attacker might be able to discover hidden content pages within a web application, these attacks are usually sent via GET and POST request to the server",
+        "in simple words" : "A brute force attack is a type of attack that will try to bypass or will attack the authentication of an account or other places where authentication is required. It works by trying different combinations of password to try to guess the correct one, every time they look at the response to craft a better file to try to have access.",
         "cwe_id" : ["CWE-307"],
-        "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "remediation" : ["Implement an account lockout policy", "Implement a regularly password changes", "Weak password policy implementation"],
+        "references" : ["https://owasp.org/www-community/attacks/Brute_force_attack", "https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/brute-force-attack/"],
+        "learn more" : ["https://github.com/jasonxtn/Kraken"]
     },
     "credential-stuffing" : {
         "name" : "Credential Stuffing", 
         "category" : "Authentication & Authorization",
         "risk" : "",
-        "description" : "",
-        "impact" : "",
-        "in simple words" : "",
+        "description" : "Credential stuffing is the automated injection of stolen username and password pairs (“credentials”) in to website login forms, in order to fraudulently gain access to user accounts. Since many users will re-use the same password and username/email, when those credentials are exposed (by a database breach or phishing attack, for example) submitting those sets of stolen credentials into dozens or hundreds of other sites can allow an attacker to compromise those accounts too. Credential Stuffing is a subset of the brute force attack category. Brute forcing will attempt to try multiple passwords against one or multiple accounts; guessing a password, in other words. Credential Stuffing typically refers to specifically using known (breached) username / password pairs against other websites.Attackers can also use information found in data leaks to reset passwords, particularly for business accounts. Since business information is often public, it is easier for attackers to obtain phone numbers, guess email addresses, and gather other relevant information. This method leverages security questions, recovery emails, or other personal information that might be included in the breach, allowing the attacker to take over accounts even if the passwords are not reused.",
+        "impact" : "Credential Stuffing is a subset of a brute force attack, where an attacker might try to use stole information from data breach attacks and try to login into different site using the combination of the email/password, this might give the attacker access to sensitive information (Banking, Health, Government) if the user does not make any changes",
+        "in simple words" : "An attacker might try to use credentials that were part of a data breach. The attacker then will try to log in into different websites like banking with the information stolen, if the user did not make any changes the attacker might be able to log into the user's account.",
         "cwe_id" : ["CWE-307"],
-        "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "remediation" : ["Implementing Double-Factor Authentication", "Implement a 'change password policy' if a data breach is known", "PINs and Security Questions"],
+        "references" : ["https://owasp.org/www-community/attacks/Credential_stuffing"],
+        "learn more" : ["https://github.com/EC-DIGIT-CSIRC/credentialLeakDB"]
     },
     "session-hijacking" : {
         "name" : "Session Hijacking", 
