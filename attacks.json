@@ -100,19 +100,19 @@
         "name" : "Session Hijacking", 
         "category" : "Authentication & Authorization",
         "risk" : "",
-        "description" : "",
-        "impact" : "",
-        "in simple words" : "",
+        "description" : "The Session Hijacking attack consists of the exploitation of the web session control mechanism, which is normally managed for a session token. Because http communication uses many different TCP connections, the web server needs a method to recognize every user’s connections. The most useful method depends on a token that the Web Server sends to the client browser after a successful client authentication. A session token is normally composed of a string of variable width and it could be used in different ways, like in the URL, in the header of the http requisition as a cookie, in other parts of the header of the http request, or yet in the body of the http requisition. The Session Hijacking attack compromises the session token by stealing or predicting a valid session token to gain unauthorized access to the Web Server.",
+        "impact" : "Session hijacking can compromise web servers by predicting or stealing a session token; a session token can then compromise in different ways, Session Sniffing, XSS, Trojans, MITM and MITB",
+        "in simple words" : "An attacker can perform a session hijacking attack by intercepting traffic communication between the user and the server, and then using that information to access the user's account and have access to sensitive data",
         "cwe_id" : ["CWE-384", "CWE-613"],
-        "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "remediation" : ["Use strong passwords", "Use MFA", "Only share session IDs with trusted sources", "Use a VPN", "Keep software up to date"],
+        "references" : ["https://www.eccouncil.org/cybersecurity-exchange/ethical-hacking/how-to-prevent-session-hijacking-attacks/", "https://owasp.org/www-community/attacks/Session_hijacking_attack"],
+        "learn more" : ["https://github.com/doyensec/Session-Hijacking-Visual-Exploitation", "https://github.com/Samsar4/Ethical-Hacking-Labs/tree/master/10-Session-Hijacking"]
     },
     "broken-access-control" : {
         "name" : "Broken Access Control", 
         "category" : "Authentication & Authorization",
         "risk" : "",
-        "description" : "",
+        "description" : "Access control, sometimes called authorization, is how a web application grants access to content and functions to some users and not others. These checks are performed after authentication, and govern what ‘authorized’ users are allowed to do. Access control sounds like a simple problem but is insidiously difficult to implement correctly. A web application’s access control model is closely tied to the content and functions that the site provides. In addition, the users may fall into a number of groups or roles with different abilities or privileges.Developers frequently underestimate the difficulty of implementing a reliable access control mechanism. Many of these schemes were not deliberately designed, but have simply evolved along with the web site. In these cases, access control rules are inserted in various locations all over the code. As the site nears deployment, the ad-hoc collection of rules becomes so unwieldy that it is almost impossible to understand. Many of these flawed access control schemes are not difficult to discover and exploit. Frequently, all that is required is to craft a request for functions or content that should not be granted. Once a flaw is discovered, the consequences of a flawed access control scheme can be devastating. In addition to viewing unauthorized content, an attacker might be able to change or delete content, perform unauthorized functions, or even take over site administration. One specific type of access control problem is administrative interfaces that allow site administrators to manage a site over the Internet. Such features are frequently used to allow site administrators to efficiently manage users, data, and content on their site. In many instances, sites support a variety of administrative roles to allow finer granularity of site administration. Due to their power, these interfaces are frequently prime targets for attack by both outsiders and insiders.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-284",  "CWE-862"],
@@ -431,6 +431,18 @@
         "remediation" : "",
         "references" : "",
         "learn more" : ""
+    }, 
+    "unknown" : {
+        "name" : "", 
+        "category" : "",
+        "risk" : "",
+        "description" : "",
+        "impact" : "",
+        "in simple words" : "",
+        "cwe_id" : [""],
+        "remediation" : "",
+        "references" : [],
+        "learn more" : []
     }
 
 }
