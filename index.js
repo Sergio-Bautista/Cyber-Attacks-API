@@ -36,10 +36,41 @@ async function loadAttacks(){
 function showAttackInfo(attack){
     const overlay = document.getElementById("overlayInfo");
 
+    const placeHolder = "There is no information for this at the moment";
+
     overlay.textContent  = "";
+    // console.log(attack["in simple words"])
+
+    const name = document.createElement("h1");
+    name.textContent = attack.name || placeHolder
+
+    const category = document.createElement("p");
+    category.textContent = attack.category || placeHolder
+
+    const risk = document.createElement("span");
+    risk.textContent = `Risk: \n${attack.risk || placeHolder}`
 
     const description = document.createElement("p");
-    description.textContent = attack.description || "There is no description for this attack at this time"
+    description.style.whiteSpace = "pre-wrap";
+    description.textContent = `Description: \n${attack.description || placeHolder}`
+
+    const impact = document.createElement("p");
+    impact.textContent = attack.impact || placeHolder
+
+    const myOwnWords = document.createElement("p");
+    myOwnWords.textContent = attack["in simple words"] || "hello"
+
+    const cweID = document.createElement("span");
+    cweID.textContent = attack.cwe_id || placeHolder
+
+    const remediation = document.createElement("span");
+    remediation.textContent = attack.remediation || placeHolder
+
+    const references = document.createElement("span");
+    references.textContent = attack.references || placeHolder
+
+    const learnMore = document.createElement("span");
+    learnMore.textContent = attack["learn more"] || placeHolder
 
 
     const closeBtn = document.createElement("button");
@@ -50,7 +81,7 @@ function showAttackInfo(attack){
         overlay.style.display = 'none';
     })
 
-    overlay.append(description, closeBtn);
+    overlay.append(name, category, risk, description, impact, myOwnWords, cweID, remediation, references, learnMore, closeBtn);
 
     overlay.style.display = 'flex';
 
