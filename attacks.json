@@ -124,301 +124,301 @@
         "name" : "Phishing", 
         "category" : "Social Engineering",
         "risk" : "",
-        "description" : "",
+        "description" : "Phishing is a type of online scam that targets consumers by sending them an e-mail that appears to be from a well-known source – an internet service provider, a bank, or a mortgage company, for example. It asks the consumer to provide personal identifying information. Then a scammer uses the information to open new accounts, or invade the consumer’s existing accounts. ",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-451"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.ftc.gov/news-events/topics/identity-theft/phishing-scams"],
+        "learn more" : ["https://github.com/topics/phishing-attacks"]
     },
     "spear-phishing" : {
         "name" : "Spear Phishing", 
         "category" : "Social Engineering",
         "risk" : "",
-        "description" : "",
+        "description" : "Spear phishing is a type of phishing attack that targets a specific individual, group or organization. These personalized scams trick victims into divulging sensitive data, downloading malware or sending money to an attacker. Like all phishing scams, spear phishing involves manipulating victims through fake stories and fraudulent scenarios. Spear phishing attacks can be conducted through email messages, text messages, chat apps or phone calls",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-451"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.ibm.com/think/topics/spear-phishing", "https://www.dni.gov/files/NCSC/documents/campaign/Counterintelligence_Tips_Spearphishing.pdf"],
+        "learn more" : ["https://github.com/kevthehermit/SpearPhisher"]
     },
     "pretexting" : {
         "name" : "Pretexting", 
         "category" : "Social Engineering",
         "risk" : "",
-        "description" : "",
+        "description" : "Pretexting is the use of a fabricated story, or pretext, to gain a victim’s trust and trick or manipulate them into sharing sensitive information, downloading malware, sending money to criminals or otherwise harming themselves or the organization they work for.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-290"],
         "remediation" : "",
-        "references" : "",
+        "references" : ["https://www.ibm.com/think/topics/pretexting"],
         "learn more" : ""
     },
     "keylogger": {
         "name" : "Keylogger", 
         "category" : "Malware Based",
         "risk" : "",
-        "description" : "",
+        "description" : "A keylogger is software or hardware designed to monitor and record keystrokes on a computer. It is commonly used covertly to steal sensitive information such as passwords without the user's knowledge. The most commonly used type of keylogger is software-based. This type is often installed on a target user's PC as part of malware, where it runs in the background, monitoring and recording keyboard inputs. Typically, it spreads as a trojan malware and communicates with external servers to unlawfully transmit stolen information. Such keyloggers can usually be detected and removed by antivirus software.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-532", "CWE-250"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.f5.com/glossary/keylogger"],
+        "learn more" : ["https://github.com/topics/keylogger", "https://github.com/adisakshya/keylogger"]
     },
     "ransomware" : {
         "name" : "Ransomware", 
         "category" : "Malware Based",
         "risk" : "",
-        "description" : "",
-        "impact" : "",
+        "description" : "Ransomware is a type of malicious software—or malware—that prevents you from accessing your computer files, systems, or networks and demands you pay a ransom for their return. Ransomware attacks can cause costly disruptions to operations and the loss of critical information and data.",
+        "impact" : "You can unknowingly download ransomware onto a computer by opening an email attachment, clicking an ad, following a link, or even visiting a website that's embedded with malware. Once the code is loaded on a computer, it will lock access to the computer itself or data and files stored there. More menacing versions can encrypt files and folders on local drives, attached drives, and even networked computers. Most of the time, you don’t know your computer has been infected. You usually discover it when you can no longer access your data or you see computer messages letting you know about the attack and demanding ransom payments.",
         "in simple words" : "",
         "cwe_id" : ["CWE-502", "CWE-269"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/ransomware", "https://www.ncsc.gov.uk/ransomware/home"],
+        "learn more" : ["https://github.com/topics/ransomware", "https://github.com/marmos91/ransomware"]
     },
     "trojan-horses" : {
         "name" : "Trojan Horse", 
         "category" : "Malware Based",
         "risk" : "",
-        "description" : "",
+        "description" : "A Trojan Horse (Trojan) is a type of malware that disguises itself as legitimate code or software. Once inside the network, attackers are able to carry out any action that a legitimate user could perform, such as exporting files, modifying data, deleting files or otherwise altering the contents of the device. Trojans may be packaged in downloads for games, tools, apps or even software patches. Many Trojan attacks also leverage social engineering tactics, as well as spoofing and phishing, to prompt the desired action in the user.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-912"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.crowdstrike.com/en-us/cybersecurity-101/malware/trojans/", "https://www.theknowledgeacademy.com/blog/what-is-a-trojan-horse/"],
+        "learn more" : ["https://github.com/PushpenderIndia/thorse"]
     },
     "spyware": {
         "name" : "Spyware", 
         "category" : "Malware Based",
         "risk" : "",
-        "description" : "",
+        "description" : "Despite its name, the term 'spyware' doesn't refer to something used by undercover operatives, but rather by the advertising industry. In fact, spyware is also known as 'adware'. It refers to a category of software that, when installed on your computer, may send you pop-up ads, redirect your browser to certain web sites, or monitor the web sites that you visit. Some extreme, invasive versions of spyware may track exactly what keys you type. Attackers may also use spyware for malicious purposes.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-200"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.cisa.gov/news-events/news/recognizing-and-avoiding-spyware"],
+        "learn more" : ["https://github.com/topics/spyware-generator", "https://github.com/mauricelambert/SpyWare"]
     },
     "man-in-the-middle" :{
         "name" : "Man-In-The-Middle (MITM)", 
         "category" : "Network",
         "risk" : "",
-        "description" : "",
+        "description" : "A man in the middle (MITM) attack is a general term for when a perpetrator positions himself in a conversation between a user and an application—either to eavesdrop or to impersonate one of the parties, making it appear as if a normal exchange of information is underway. The goal of an attack is to steal personal information, such as login credentials, account details and credit card numbers. Targets are typically the users of financial applications, SaaS businesses, e-commerce sites and other websites where logging in is required.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-300", "319"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.imperva.com/learn/application-security/man-in-the-middle-attack-mitm/", "https://www.ibm.com/think/topics/man-in-the-middle"],
+        "learn more" : ["https://github.com/topics/man-in-the-middle"]
     },
     "dns-spoofing" : {
         "name" : "DNS Spoofing", 
         "category" : "Network",
         "risk" : "",
-        "description" : "",
+        "description" : "DNS spoofing is a cyberattack used to redirect internet users to fake or malicious websites. Attackers compromise existing DNS records and manipulate IP addresses to send users to fake websites they’ve made. These websites look legitimate on the surface, but they can steal your data, install malware, or conduct other harmful actions behind the scenes. ",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-345"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://nordvpn.com/blog/what-is-dns-spoofing/?utm_adset=a9955b21-9a90-4dea-bab8-2cc765bb332e"],
+        "learn more" : ["https://medium.com/@sebastienwebdev/dns-spoofer-f337bb85c567"]
     },
     "arp-spoofing" : {
         "name" : "ARP Spoofing", 
         "category" : "Network",
         "risk" : "",
-        "description" : "",
+        "description" : "Address Resolution Protocol (ARP) is deployed to resolve the IP addresses into permanent physical machine addresses in a local area network (LAN). ARP spoofing is a type of cybercrime in which the hacker sends spoofed ARP messages to link their Media Access Control address or MAC address with the target’s IP address. So, if you’re wondering what the aim of an ARP spoofing attack is and why bad actors use it, let us shed some light. Basically, attackers redirect and misuse messages intended for the target’s MAC address. This allows them to inspect, modify, or even stop the traffic completely",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-290"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://easydmarc.com/blog/what-is-arp-spoofing-and-how-to-prevent-it/", "https://www.cloudsek.com/knowledge-base/what-is-arp-spoofing"],
+        "learn more" : ["https://github.com/EONRaider/Arp-Spoofer", "https://github.com/topics/arp-spoofing"]
     },
     "packet-sniffing" : {
         "name" : "Packet Sniffing", 
         "category" : "Network",
         "risk" : "",
-        "description" : "",
+        "description" : "As computers share information, access networks or use the internet, packets of data are exchanged. These data packets contain information such as who the user is, what they’re doing, what networks and sites are used, as well as text from messages, login information, IP addresses and various other data. In an organization, “good” packet sniffing software will compile these packages into a single storage point, where your IT team can sift through and look at user data. This keeps the organization safe and ensures employees are staying on task. Alternatively, you might only compile certain types of packets that are deemed higher risk. Packet sniffing is a great way to keep your organization safe, but it can also be used by hackers to steal information. A malicious packet sniffing attack employs the same tactics as a legitimate one, but the data goes directly to the hacker instead of your secure storage space. In this type of attack, the hacker is accessing packets filled with critical and confidential information. To put it simply, a hacker is intercepting and looking through data within your network.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-319"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.okta.com/identity-101/sniffing-attack/", "https://www.iansresearch.com/resources/all-blogs/post/security-blog/2022/08/11/how-to-prevent-and-detect-packet-sniffing-attacks"],
+        "learn more" : ["https://github.com/topics/packet-sniffing", "https://github.com/SHAHKRISHS/Packet-Sniffing-Tool"]
     },
     "denial-of-service" : {
         "name" : "Denial Of Service (DoS)", 
         "category" : "Denial Of Service",
         "risk" : "",
-        "description" : "",
+        "description" : "A denial-of-service (DoS) attack occurs when legitimate users are unable to access information systems, devices, or other network resources due to the actions of a malicious cyber threat actor. Services affected may include email, websites, online accounts (e.g., banking), or other services that rely on the affected computer or network. A denial-of-service condition is accomplished by flooding the targeted host or network with traffic until the target cannot respond or simply crashes, preventing access for legitimate users. DoS attacks can cost an organization both time and money while their resources and services are inaccessible.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-400"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.cisa.gov/news-events/news/understanding-denial-service-attacks"],
+        "learn more" : ["https://github.com/topics/denial-of-service-attack", "https://github.com/palahsu/DDoS-Ripper"]
     },
     "distributed-denial-of-service" : {
         "name" : "Distributed Denial Of Service", 
         "category" : "Denial Of Service",
         "risk" : "",
-        "description" : "",
+        "description" : "A DDoS attack is a Denial of Service attack that comes from multiple sources. In this kind of cyberattack, the attacker will disrupt network services, usually by flooding a targeted machine with requests. The system becomes overloaded, and so legitimate traffic or communications can’t get through. As a Distributed Denial of Service attack does this from multiple sources, the number of incoming requests can be greater, and it’s much harder to stop the attack in its tracks. This article will cover the topic of DDoS attacks in greater detail.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-400"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.atera.com/glossary/ddos-attacks/", ""],
+        "learn more" : ["https://github.com/topics/denial-of-service-attack", "https://github.com/palahsu/DDoS-Ripper"]
     },
     "insider-threat" : {
         "name" : "Insider Threat", 
         "category" : "Insider & Physical",
         "risk" : "",
-        "description" : "",
+        "description" : "An insider is any person who has or had authorized access to or knowledge of an organization’s resources, including personnel, facilities, information, equipment, networks, and systems Examples of an insider may include: A person the organization trusts, including employees, organization members, and those to whom the organization has given sensitive information and access. A person given a badge or access device identifying them as someone with regular or continuous access (e.g., an employee or member of an organization, a contractor, a vendor, a custodian, or a repair person). A person to whom the organization has supplied a computer and/or network access. A person who develops the organization’s products and services; this group includes those who know the secrets of the products that provide value to the organization. A person who is knowledgeable about the organization’s fundamentals, including pricing, costs, and organizational strengths and weaknesses.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-250"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats", "https://www.ibm.com/think/topics/insider-threats"],
+        "learn more" : ["https://github.com/Insider-Threat/Insider-Threat"]
     },
     "shoulder-surfing" : {
         "name" : "Shoulder Surfing", 
         "category" : "Insider & Physical",
         "risk" : "",
-        "description" : "",
+        "description" :"A shoulder surfing attack describes a situation where the attacker can physically view the device screen and keypad to obtain personal information. It is one of the few attack methods requiring the attacker to be physically close to the victim to succeed. While it might be as simple as looking over the victim’s shoulder as the name suggests, some attackers will use binoculars, miniature video cameras, or other optical devices to spy on their victims. The goal is to obtain information such as usernames and passwords, personally identifiable or sensitive information, and credit card numbers. While most shoulder surfing attacks will occur with malicious intent, some might result from nosy people, where it is more an invasion of privacy.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-522"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.beyondidentity.com/glossary/shoulder-surfing"],
+        "learn more" : ["https://capec.mitre.org/data/definitions/508.html"]
     },
     "zero-day-exploit" : {
         "name" : "Zero Day Exploit", 
         "category" : "",
         "risk" : "",
-        "description" : "",
+        "description" : "A zero-day exploit is a cyberattack vector that takes advantage of an unknown or unaddressed security flaw in computer software, hardware or firmware. 'Zero day' refers to the fact that the software or device vendor has zero days to fix the flaw because malicious actors can already use it to access vulnerable systems.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-937"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.ibm.com/think/topics/zero-day", "https://www.wiz.io/academy/detection-and-response/zero-day-exploits"],
+        "learn more" : ["https://github.com/paulveillard/cybersecurity-zero-day"]
     },
     "supply-chain-attack" : {
         "name" : "Supply Chain", 
         "category" : "",
         "risk" : "",
-        "description" : "",
+        "description" : "A supply chain attack refers to when someone uses an outside provider or partner that has access to your data and systems to infiltrate your digital infrastructure. Because the outside party has been granted the rights to use and manipulate areas of your network, your applications, or sensitive data, the attacker only has to either penetrate the third party’s defenses or program a loophole into a solution offered by a vendor to infiltrate your system. This makes a supply chain attack one of the most dangerous forms of a network security attack. Supply chain attacks are diverse, impacting large companies, as was the case with the Target security breach, and typically dependable systems, like when automated teller machine (ATM) malware is used to steal cash. They have also been used against governments, as was the case with the Stuxnet computer worm, which was designed to infiltrate Iran’s nuclear facilities.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-494"],
         "remediation" : "",
-        "references" : "",
+        "references" : ["https://www.fortinet.com/resources/cyberglossary/supply-chain-attacks", "https://www.cloudflare.com/learning/security/what-is-a-supply-chain-attack/"],
         "learn more" : ""
     },
     "hash-collision-attack" : {
         "name" : "Hash Collision", 
         "category" : "Cryptography & Encryption",
         "risk" : "",
-        "description" : "",
+        "description" : "A Hash Collision Attack is an attempt to find two input strings of a hash function that produce the same hash result. Because hash functions have infinite input length and a predefined output length, there is inevitably going to be the possibility of two different inputs that produce the same output hash. If two separate inputs produce the same hash output, it is called a collision. This collision can then be exploited by any application that compares two hashes together – such as password hashes, file integrity checks, etc. The odds of a collision are of course very low, especially so for functions with very large output sizes. However as available computational power increases, the ability to brute force hash collisions becomes more and more feasib",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-327"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://privacycanada.net/hash-functions/hash-collision-attack/", "https://layerlogix.com/blog/hash-collision-attacks-explained"],
+        "learn more" : ["https://github.com/naivenom/hash-collision-attack", "https://github.com/cr-marcstevens/sha1collisiondetection"]
     }, 
     "password-cracking" : {
         "name" : "Password Cracking", 
         "category" : "Cryptography & Encryption",
         "risk" : "",
-        "description" : "",
+        "description" : "Password cracking (also called password hacking) is an attack vector that involves hackers attempting to crack or determine a password for unauthorized authentication. Password hacking uses a variety of programmatic techniques, manual steps, and automation using specialized tools to compromise a password. These password cracking tools are referred to as ‘password crackers’. Increasingly, these tools are leveraging AI to improve password cracking speed and efficiency. Passwords can also be stolen via other tactics, such as by memory-scraping malware, shoulder surfing, third party breaches, and tools like Redline password stealer. A password can refer to any string of characters or secret used to authenticate an authorized user to a resource. Passwords are typically paired with a username or other mechanism to provide proof of identity. This combination is referred to as credentials.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-521", "CWE-522"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.beyondtrust.com/blog/entry/password-cracking-101-attacks-defenses-explained", "https://www.techtarget.com/searchsecurity/definition/password-cracker", "https://attack.mitre.org/techniques/T1110/002/"],
+        "learn more" : ["https://github.com/n0kovo/awesome-password-cracking", "https://github.com/iphelix/pack"]
     }, 
     "ssl-striping" : {
         "name" : "SSL Striping", 
         "category" : "Cryptography & Encryption",
         "risk" : "",
-        "description" : "",
+        "description" : "SSL stripping is a man-in-the-middle attack that downgrades secure HTTPS connections to HTTP, exposing sensitive user data. This article explains how the attack works and outlines the best technical and strategic measures businesses and users can take to defend against it, such as HSTS enforcement, certificate transparency, and automated certificate management.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-319"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.sectigo.com/blog/what-is-an-ssl-stripping-attack", "https://www.cyberark.com/what-is/ssl-stripping-attacks/"],
+        "learn more" : ["https://github.com/cheese-hub/sslstrip", "https://cheese-hub.github.io/network-security/03-sslstrip/index.html"]
     }, 
     "downgrade-attack" : {
         "name" : "Downgrade", 
         "category" : "Cryptography & Encryption",
         "risk" : "",
-        "description" : "",
+        "description" : "Downgrade attacks take advantage of a system’s backward compatibility to force it into less secure modes of operation. Because they can use encrypted or unencrypted connections, systems such as STARTTLS that employ opportunistic encryption are at the greatest risk from downgrade attacks. In general, any system that employs any form of backward compatibility can be susceptible to a downgrade attack. The balance between maximum utility and maximum security is a difficult one to strike: however tempting it may be to enforce your visitors to keep their systems updated, you want people to be able to access your server using older technology.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-757"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/downgrade-attack/", "https://www.huntress.com/cybersecurity-101/topic/what-is-downgrade-attacks"],
+        "learn more" : ["https://github.com/shakevsky/keybuster/blob/main/poc/downgrade/README.md", "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.010/T1562.010.md"]
     }, 
     "evil-twin" : {
         "name" : "Evil Twin", 
         "category" : "Wireless",
         "risk" : "",
-        "description" : "",
+        "description" : "An evil twin attack takes place when an attacker sets up a fake Wi-Fi access point hoping that users will connect to it instead of a legitimate one. When users connect to this access point, all the data they share with the network passes through a server controlled by the attacker. An attacker can create an evil twin with a smartphone or other internet-capable device and some readily available software. Evil twin attacks are more common on public Wi-Fi networks which are unsecured and leave your personal data vulnerable.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-300"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://usa.kaspersky.com/resource-center/preemptive-safety/evil-twin-attacks"],
+        "learn more" : ["https://github.com/v1s1t0r1sh3r3/airgeddon", "https://github.com/AlmogJakov/Evil-Twin"]
     }, 
     "wi-fi-deauthentication" :{
         "name" : "WI-FI Deauthentication", 
         "category" : "Wireless",
         "risk" : "",
-        "description" : "",
+        "description" : "A deauthentication attack is a type of denial of service attack interfering with communication between routers and devices. It exploits IEEE 802.11 wireless networks as they have the necessary deauthentication frames. Networks use them to end connections or, in other words, disconnect users. The issue begins when networks cannot verify the source of deauth frames. Deauthentication attacks imitate these frames and force targeted users to go offline. Since such Wi-Fi access points do not properly authenticate termination requests, it closes connections. Due to security gaps in management frames, deauth attacks are possible even with modern network security keys (like WPA2). For instance, perpetrators can capture WPA/WPA2 4-way handshake and use commands like aireplay-ng -0 to deauthenticate wireless users.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-294"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://nordvpn.com/blog/deauthentication-attack/?utm_term=nonbrand&utm_adset=a9955b21-9a90-4dea-bab8-2cc765bb332e&utm_medium=cpc&utm_source=brave&utm_content=d44b38ca-a0ec-4935-b118-12e39f24288e&utm_campaign=6637d28d-8b98-4909-8bbc-d510abaebf89"],
+        "learn more" : ["https://www.aircrack-ng.org/doku.php?id=deauthentication", "https://www.linkedin.com/pulse/understanding-wi-fi-deauthentication-aircrack-ng-harsh-mehta-lox6f", "https://github.com/flashnuke/wifi-deauth"]
     }, 
     "buffer-overflow" :{
         "name" : "Buffer Overflow", 
         "category" : "Software & Code",
         "risk" : "",
-        "description" : "",
-        "impact" : "",
+        "description" : "A buffer overflow condition exists when a program attempts to put more data in a buffer than it can hold or when a program attempts to put data in a memory area past a buffer. In this case, a buffer is a sequential section of memory allocated to contain anything from a character string to an array of integers. Writing outside the bounds of a block of allocated memory can corrupt data, crash the program, or cause the execution of malicious code.",
+        "impact" : "Category:Availability: Buffer overflows generally lead to crashes. Other attacks leading to lack of availability are possible, including putting the program into an infinite loop. Access control (instruction processing): Buffer overflows often can be used to execute arbitrary code, which is usually outside the scope of a program’s implicit security policy. Other: When the consequence is arbitrary code execution, this can often be used to subvert any other security service.",
         "in simple words" : "",
         "cwe_id" : ["CWE-120"],
         "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "references" : ["https://owasp.org/www-community/vulnerabilities/Buffer_Overflow"],
+        "learn more" : ["https://github.com/hacksysteam/HackSysExtremeVulnerableDriver", "https://github.com/gh0x0st/Buffer_Overflow"]
     }, 
     "race-condition-attack" : {
         "name" : "Race Condition", 
         "category" : "Software & Code",
-        "risk" : "",
-        "description" : "",
+        "risk" : "Medium",
+        "description" : "A race condition occurs within concurrent environments, and it is effectively a property of a code sequence. Depending on the context, a code sequence may be in the form of a function call, a small number of instructions, a series of program invocations, etc. A race condition violates these properties, which are closely related: Exclusivity - the code sequence is given exclusive access to the shared resource, i.e., no other code sequence can modify properties of the shared resource before the original sequence has completed execution. Atomicity - the code sequence is behaviorally atomic, i.e., no other thread or process can concurrently execute the same sequence of instructions (or a subset) against the same resource.A race condition exists when an 'interfering code sequence' can still access the shared resource, violating exclusivity.The interfering code sequence could be 'trusted' or 'untrusted.'' A trusted interfering code sequence occurs within the product; it cannot be modified by the attacker, and it can only be invoked indirectly. An untrusted interfering code sequence can be authored directly by the attacker, and typically it is external to the vulnerable product.",
         "impact" : "",
         "in simple words" : "",
         "cwe_id" : ["CWE-362"],
-        "remediation" : "",
-        "references" : "",
-        "learn more" : ""
+        "remediation" : ["When using multithreading and operating on shared variables, only use thread-safe functions.", "In languages that support it, use synchronization primitives. Only wrap these around critical code to minimize the impact on performance."],
+        "references" : ["https://cwe.mitre.org/data/definitions/362.html"],
+        "learn more" : ["http://github.com/firmianay/Life-long-Learner/blob/master/SEED-labs/race-condition-vulnerability-lab.md"]
     }, 
     "code-injection" : {
         "name" : "Code Injection", 
@@ -429,12 +429,11 @@
         "in simple words" : "",
         "cwe_id" : ["CWE-94"],
         "remediation" : "",
-        "references" : "",
+        "references" : [""],
         "learn more" : ""
     }, 
     "unknown" : {
-        "name" : "", 
-        "category" : "",
+        "name" : "",
         "risk" : "",
         "description" : "",
         "impact" : "",
@@ -442,7 +441,6 @@
         "cwe_id" : [""],
         "remediation" : "",
         "references" : [],
-        "learn more" : 
+        "learn more" : ["https://github.com/vitalysim/Awesome-Hacking-Resources?tab=readme-ov-file#sharpening-your-skills", "https://github.com/Z4nzu/hackingtool"]
     }
-
 }
