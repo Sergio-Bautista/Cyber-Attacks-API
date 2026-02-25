@@ -3,7 +3,7 @@
     "sql-attack" : {
         "name" : "SQL Injection",
         "category" : "Web",
-        "risk" : "High",
+        "risk" : "Critical",
         "description" : "A SQL injection attack consists of insertions or 'injection' of a SQL query via the input data from the client to the application.",
         "impact" : "A successful SQL injection exploit can read sensitive data from databases, modify database data (Insert/Update/Delete), execute admin operations on the database and in some cases issue commands to the operating system.",
         "in simple words" : "An SQL attack allows an attacker to input things that shouldn't be allow, bypassing the security of the database", 
@@ -39,7 +39,7 @@
     "server-side-request-forgery": {
         "name" : "Server Side Request Forgery (SSRF)", 
         "category" : "API & Server",
-        "risk" : "",
+        "risk" : "Critical",
         "description" : "An attacker can create a new or modify a URL that will make the code running on the server read or submit data, this could allow the attacker to read metadata configuration form the server.",
         "impact" : "In a SSRF an attacker can abuse the functionality on the server to read or update internal resources. If the target application has the functionality of reading data form the URL the attacker can craft or modify URLs",
         "in simple words" : "If the server reads parameters data from the server, an attacker can change the data being read by the server code and make it do a different thing than expected works like a Path Traversal.",
@@ -51,7 +51,7 @@
     "command-injection" : {
         "name" : "Command Injection", 
         "category" : "Web",
-        "risk" : "",
+        "risk" : "Critical",
         "description" : "Command injection is an attack in which the goal is execution of arbitrary commands on the host operating system via a vulnerable application. Command injection attacks are possible when an application passes unsafe user supplied data (forms, cookies, HTTP headers etc.) to a system shell. In this attack, the attacker-supplied operating system commands are usually executed with the privileges of the vulnerable application. Command injection attacks are possible largely due to insufficient input validation. This attack differs from Code Injection, in that code injection allows the attacker to add their own code that is then executed by the application. In Command Injection, the attacker extends the default functionality of the application, which execute system commands, without the necessity of injecting code.",
         "impact" : "The attacker can gain access to personal information and the configuration files of the server",
         "in simple words" : "In this attack unwanted or unauthorized commands are executed by taking advantage of an application's vulnerabilities, such as input validation. If this attack is successful, the attacker can have access to sensitive data such as personal information, different financial records, and other personal identifiable information (PII)",
@@ -63,7 +63,7 @@
     "directory-traversal" : {
         "name" : "Directory/path Traversal", 
         "category" : "Web",
-        "risk" : "",
+        "risk" : "High",
         "description" : "A path traversal attack (also known as directory traversal) aims to access files and directories that are stored outside the web root folder. By manipulating variables that reference files with 'dot-dot-slash (../)' sequences and its variations or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system including application source code or configuration and critical system files. It should be noted that access to files is limited by system operational access control (such as in the case of locked or in-use files on the Microsoft Windows operating system). This attack is also known as 'dot-dot-slash', 'directory traversal', 'directory climbing' and 'backtracking'",
         "impact" : "A path traversal or dictionary attack can allow an attacker to access files and resources outside of the authorized directory. By modifying the URL path an attacker can change the hierarchy of the directory the application redirects them to. ",
         "in my own words" : "An attacker might access different directories in your application that you don't want them to access. When someone visits your application, they might bypass the default directory you want your application to send them by inserting something like '../' to change the directory one level above and see the structure of the application. ",
@@ -75,7 +75,7 @@
     "brute-force-attack" : {
         "name" : "Brute Force Attack", 
         "category" : "Authentication & Authorization",
-        "risk" : "",
+        "risk" : "Medium",
         "description" : "A brute force attack can manifest itself in many different ways, but primarily consists in an attacker configuring predetermined values, making requests to a server using those values, and then analyzing the response. For the sake of efficiency, an attacker may use a dictionary attack (with or without mutations) or a traditional brute-force attack (with given classes of characters e.g.: alphanumeric, special, case (in)sensitive). Considering a given method, number of tries, efficiency of the system which conducts the attack, and estimated efficiency of the system which is attacked the attacker is able to calculate approximately how long it will take to submit all chosen predetermined values.",
         "impact" : "If a brute force attack successful, the attacker might be able to discover hidden content pages within a web application, these attacks are usually sent via GET and POST request to the server",
         "in simple words" : "A brute force attack is a type of attack that will try to bypass or will attack the authentication of an account or other places where authentication is required. It works by trying different combinations of password to try to guess the correct one, every time they look at the response to craft a better file to try to have access.",
@@ -87,7 +87,7 @@
     "credential-stuffing" : {
         "name" : "Credential Stuffing", 
         "category" : "Authentication & Authorization",
-        "risk" : "",
+        "risk" : "High",
         "description" : "Credential stuffing is the automated injection of stolen username and password pairs (“credentials”) in to website login forms, in order to fraudulently gain access to user accounts. Since many users will re-use the same password and username/email, when those credentials are exposed (by a database breach or phishing attack, for example) submitting those sets of stolen credentials into dozens or hundreds of other sites can allow an attacker to compromise those accounts too. Credential Stuffing is a subset of the brute force attack category. Brute forcing will attempt to try multiple passwords against one or multiple accounts; guessing a password, in other words. Credential Stuffing typically refers to specifically using known (breached) username / password pairs against other websites.Attackers can also use information found in data leaks to reset passwords, particularly for business accounts. Since business information is often public, it is easier for attackers to obtain phone numbers, guess email addresses, and gather other relevant information. This method leverages security questions, recovery emails, or other personal information that might be included in the breach, allowing the attacker to take over accounts even if the passwords are not reused.",
         "impact" : "Credential Stuffing is a subset of a brute force attack, where an attacker might try to use stole information from data breach attacks and try to login into different site using the combination of the email/password, this might give the attacker access to sensitive information (Banking, Health, Government) if the user does not make any changes",
         "in simple words" : "An attacker might try to use credentials that were part of a data breach. The attacker then will try to log in into different websites like banking with the information stolen, if the user did not make any changes the attacker might be able to log into the user's account.",
@@ -99,7 +99,7 @@
     "session-hijacking" : {
         "name" : "Session Hijacking", 
         "category" : "Authentication & Authorization",
-        "risk" : "",
+        "risk" : "High",
         "description" : "The Session Hijacking attack consists of the exploitation of the web session control mechanism, which is normally managed for a session token. Because http communication uses many different TCP connections, the web server needs a method to recognize every user’s connections. The most useful method depends on a token that the Web Server sends to the client browser after a successful client authentication. A session token is normally composed of a string of variable width and it could be used in different ways, like in the URL, in the header of the http requisition as a cookie, in other parts of the header of the http request, or yet in the body of the http requisition. The Session Hijacking attack compromises the session token by stealing or predicting a valid session token to gain unauthorized access to the Web Server.",
         "impact" : "Session hijacking can compromise web servers by predicting or stealing a session token; a session token can then compromise in different ways, Session Sniffing, XSS, Trojans, MITM and MITB",
         "in simple words" : "An attacker can perform a session hijacking attack by intercepting traffic communication between the user and the server, and then using that information to access the user's account and have access to sensitive data",
@@ -111,7 +111,7 @@
     "broken-access-control" : {
         "name" : "Broken Access Control", 
         "category" : "Authentication & Authorization",
-        "risk" : "",
+        "risk" : "Critical",
         "description" : "Access control, sometimes called authorization, is how a web application grants access to content and functions to some users and not others. These checks are performed after authentication, and govern what ‘authorized’ users are allowed to do. Access control sounds like a simple problem but is insidiously difficult to implement correctly. A web application’s access control model is closely tied to the content and functions that the site provides. In addition, the users may fall into a number of groups or roles with different abilities or privileges.Developers frequently underestimate the difficulty of implementing a reliable access control mechanism. Many of these schemes were not deliberately designed, but have simply evolved along with the web site. In these cases, access control rules are inserted in various locations all over the code. As the site nears deployment, the ad-hoc collection of rules becomes so unwieldy that it is almost impossible to understand. Many of these flawed access control schemes are not difficult to discover and exploit. Frequently, all that is required is to craft a request for functions or content that should not be granted. Once a flaw is discovered, the consequences of a flawed access control scheme can be devastating. In addition to viewing unauthorized content, an attacker might be able to change or delete content, perform unauthorized functions, or even take over site administration. One specific type of access control problem is administrative interfaces that allow site administrators to manage a site over the Internet. Such features are frequently used to allow site administrators to efficiently manage users, data, and content on their site. In many instances, sites support a variety of administrative roles to allow finer granularity of site administration. Due to their power, these interfaces are frequently prime targets for attack by both outsiders and insiders.",
         "impact" : "",
         "in simple words" : "",
@@ -123,7 +123,7 @@
     "phishing" : {
         "name" : "Phishing", 
         "category" : "Social Engineering",
-        "risk" : "",
+        "risk" : "Medium",
         "description" : "Phishing is a type of online scam that targets consumers by sending them an e-mail that appears to be from a well-known source – an internet service provider, a bank, or a mortgage company, for example. It asks the consumer to provide personal identifying information. Then a scammer uses the information to open new accounts, or invade the consumer’s existing accounts. ",
         "impact" : "",
         "in simple words" : "",
@@ -135,7 +135,7 @@
     "spear-phishing" : {
         "name" : "Spear Phishing", 
         "category" : "Social Engineering",
-        "risk" : "",
+        "risk" : "High",
         "description" : "Spear phishing is a type of phishing attack that targets a specific individual, group or organization. These personalized scams trick victims into divulging sensitive data, downloading malware or sending money to an attacker. Like all phishing scams, spear phishing involves manipulating victims through fake stories and fraudulent scenarios. Spear phishing attacks can be conducted through email messages, text messages, chat apps or phone calls",
         "impact" : "",
         "in simple words" : "",
@@ -147,7 +147,7 @@
     "pretexting" : {
         "name" : "Pretexting", 
         "category" : "Social Engineering",
-        "risk" : "",
+        "risk" : "Medium",
         "description" : "Pretexting is the use of a fabricated story, or pretext, to gain a victim’s trust and trick or manipulate them into sharing sensitive information, downloading malware, sending money to criminals or otherwise harming themselves or the organization they work for.",
         "impact" : "",
         "in simple words" : "",
@@ -159,7 +159,7 @@
     "keylogger": {
         "name" : "Keylogger", 
         "category" : "Malware Based",
-        "risk" : "",
+        "risk" : "High",
         "description" : "A keylogger is software or hardware designed to monitor and record keystrokes on a computer. It is commonly used covertly to steal sensitive information such as passwords without the user's knowledge. The most commonly used type of keylogger is software-based. This type is often installed on a target user's PC as part of malware, where it runs in the background, monitoring and recording keyboard inputs. Typically, it spreads as a trojan malware and communicates with external servers to unlawfully transmit stolen information. Such keyloggers can usually be detected and removed by antivirus software.",
         "impact" : "",
         "in simple words" : "",
@@ -171,7 +171,7 @@
     "ransomware" : {
         "name" : "Ransomware", 
         "category" : "Malware Based",
-        "risk" : "",
+        "risk" : "Critical",
         "description" : "Ransomware is a type of malicious software—or malware—that prevents you from accessing your computer files, systems, or networks and demands you pay a ransom for their return. Ransomware attacks can cause costly disruptions to operations and the loss of critical information and data.",
         "impact" : "You can unknowingly download ransomware onto a computer by opening an email attachment, clicking an ad, following a link, or even visiting a website that's embedded with malware. Once the code is loaded on a computer, it will lock access to the computer itself or data and files stored there. More menacing versions can encrypt files and folders on local drives, attached drives, and even networked computers. Most of the time, you don’t know your computer has been infected. You usually discover it when you can no longer access your data or you see computer messages letting you know about the attack and demanding ransom payments.",
         "in simple words" : "",
@@ -183,7 +183,7 @@
     "trojan-horses" : {
         "name" : "Trojan Horse", 
         "category" : "Malware Based",
-        "risk" : "",
+        "risk" : "High",
         "description" : "A Trojan Horse (Trojan) is a type of malware that disguises itself as legitimate code or software. Once inside the network, attackers are able to carry out any action that a legitimate user could perform, such as exporting files, modifying data, deleting files or otherwise altering the contents of the device. Trojans may be packaged in downloads for games, tools, apps or even software patches. Many Trojan attacks also leverage social engineering tactics, as well as spoofing and phishing, to prompt the desired action in the user.",
         "impact" : "",
         "in simple words" : "",
@@ -195,7 +195,7 @@
     "spyware": {
         "name" : "Spyware", 
         "category" : "Malware Based",
-        "risk" : "",
+        "risk" : "Medium",
         "description" : "Despite its name, the term 'spyware' doesn't refer to something used by undercover operatives, but rather by the advertising industry. In fact, spyware is also known as 'adware'. It refers to a category of software that, when installed on your computer, may send you pop-up ads, redirect your browser to certain web sites, or monitor the web sites that you visit. Some extreme, invasive versions of spyware may track exactly what keys you type. Attackers may also use spyware for malicious purposes.",
         "impact" : "",
         "in simple words" : "",
@@ -207,7 +207,7 @@
     "man-in-the-middle" :{
         "name" : "Man-In-The-Middle (MITM)", 
         "category" : "Network",
-        "risk" : "",
+        "risk" : "High",
         "description" : "A man in the middle (MITM) attack is a general term for when a perpetrator positions himself in a conversation between a user and an application—either to eavesdrop or to impersonate one of the parties, making it appear as if a normal exchange of information is underway. The goal of an attack is to steal personal information, such as login credentials, account details and credit card numbers. Targets are typically the users of financial applications, SaaS businesses, e-commerce sites and other websites where logging in is required.",
         "impact" : "",
         "in simple words" : "",
@@ -219,7 +219,7 @@
     "dns-spoofing" : {
         "name" : "DNS Spoofing", 
         "category" : "Network",
-        "risk" : "",
+        "risk" : "High",
         "description" : "DNS spoofing is a cyberattack used to redirect internet users to fake or malicious websites. Attackers compromise existing DNS records and manipulate IP addresses to send users to fake websites they’ve made. These websites look legitimate on the surface, but they can steal your data, install malware, or conduct other harmful actions behind the scenes. ",
         "impact" : "",
         "in simple words" : "",
@@ -231,7 +231,7 @@
     "arp-spoofing" : {
         "name" : "ARP Spoofing", 
         "category" : "Network",
-        "risk" : "",
+        "risk" : "High",
         "description" : "Address Resolution Protocol (ARP) is deployed to resolve the IP addresses into permanent physical machine addresses in a local area network (LAN). ARP spoofing is a type of cybercrime in which the hacker sends spoofed ARP messages to link their Media Access Control address or MAC address with the target’s IP address. So, if you’re wondering what the aim of an ARP spoofing attack is and why bad actors use it, let us shed some light. Basically, attackers redirect and misuse messages intended for the target’s MAC address. This allows them to inspect, modify, or even stop the traffic completely",
         "impact" : "",
         "in simple words" : "",
@@ -243,7 +243,7 @@
     "packet-sniffing" : {
         "name" : "Packet Sniffing", 
         "category" : "Network",
-        "risk" : "",
+        "risk" : "Medium",
         "description" : "As computers share information, access networks or use the internet, packets of data are exchanged. These data packets contain information such as who the user is, what they’re doing, what networks and sites are used, as well as text from messages, login information, IP addresses and various other data. In an organization, “good” packet sniffing software will compile these packages into a single storage point, where your IT team can sift through and look at user data. This keeps the organization safe and ensures employees are staying on task. Alternatively, you might only compile certain types of packets that are deemed higher risk. Packet sniffing is a great way to keep your organization safe, but it can also be used by hackers to steal information. A malicious packet sniffing attack employs the same tactics as a legitimate one, but the data goes directly to the hacker instead of your secure storage space. In this type of attack, the hacker is accessing packets filled with critical and confidential information. To put it simply, a hacker is intercepting and looking through data within your network.",
         "impact" : "",
         "in simple words" : "",
@@ -255,7 +255,7 @@
     "denial-of-service" : {
         "name" : "Denial Of Service (DoS)", 
         "category" : "Denial Of Service",
-        "risk" : "",
+        "risk" : "Medium",
         "description" : "A denial-of-service (DoS) attack occurs when legitimate users are unable to access information systems, devices, or other network resources due to the actions of a malicious cyber threat actor. Services affected may include email, websites, online accounts (e.g., banking), or other services that rely on the affected computer or network. A denial-of-service condition is accomplished by flooding the targeted host or network with traffic until the target cannot respond or simply crashes, preventing access for legitimate users. DoS attacks can cost an organization both time and money while their resources and services are inaccessible.",
         "impact" : "",
         "in simple words" : "",
@@ -267,7 +267,7 @@
     "distributed-denial-of-service" : {
         "name" : "Distributed Denial Of Service", 
         "category" : "Denial Of Service",
-        "risk" : "",
+        "risk" : "High",
         "description" : "A DDoS attack is a Denial of Service attack that comes from multiple sources. In this kind of cyberattack, the attacker will disrupt network services, usually by flooding a targeted machine with requests. The system becomes overloaded, and so legitimate traffic or communications can’t get through. As a Distributed Denial of Service attack does this from multiple sources, the number of incoming requests can be greater, and it’s much harder to stop the attack in its tracks. This article will cover the topic of DDoS attacks in greater detail.",
         "impact" : "",
         "in simple words" : "",
@@ -279,7 +279,7 @@
     "insider-threat" : {
         "name" : "Insider Threat", 
         "category" : "Insider & Physical",
-        "risk" : "",
+        "risk" : "Critical",
         "description" : "An insider is any person who has or had authorized access to or knowledge of an organization’s resources, including personnel, facilities, information, equipment, networks, and systems Examples of an insider may include: A person the organization trusts, including employees, organization members, and those to whom the organization has given sensitive information and access. A person given a badge or access device identifying them as someone with regular or continuous access (e.g., an employee or member of an organization, a contractor, a vendor, a custodian, or a repair person). A person to whom the organization has supplied a computer and/or network access. A person who develops the organization’s products and services; this group includes those who know the secrets of the products that provide value to the organization. A person who is knowledgeable about the organization’s fundamentals, including pricing, costs, and organizational strengths and weaknesses.",
         "impact" : "",
         "in simple words" : "",
@@ -291,7 +291,7 @@
     "shoulder-surfing" : {
         "name" : "Shoulder Surfing", 
         "category" : "Insider & Physical",
-        "risk" : "",
+        "risk" : "Low",
         "description" :"A shoulder surfing attack describes a situation where the attacker can physically view the device screen and keypad to obtain personal information. It is one of the few attack methods requiring the attacker to be physically close to the victim to succeed. While it might be as simple as looking over the victim’s shoulder as the name suggests, some attackers will use binoculars, miniature video cameras, or other optical devices to spy on their victims. The goal is to obtain information such as usernames and passwords, personally identifiable or sensitive information, and credit card numbers. While most shoulder surfing attacks will occur with malicious intent, some might result from nosy people, where it is more an invasion of privacy.",
         "impact" : "",
         "in simple words" : "",
@@ -303,7 +303,7 @@
     "zero-day-exploit" : {
         "name" : "Zero Day Exploit", 
         "category" : "",
-        "risk" : "",
+        "risk" : "Critical",
         "description" : "A zero-day exploit is a cyberattack vector that takes advantage of an unknown or unaddressed security flaw in computer software, hardware or firmware. 'Zero day' refers to the fact that the software or device vendor has zero days to fix the flaw because malicious actors can already use it to access vulnerable systems.",
         "impact" : "",
         "in simple words" : "",
@@ -315,7 +315,7 @@
     "supply-chain-attack" : {
         "name" : "Supply Chain", 
         "category" : "",
-        "risk" : "",
+        "risk" : "Critical",
         "description" : "A supply chain attack refers to when someone uses an outside provider or partner that has access to your data and systems to infiltrate your digital infrastructure. Because the outside party has been granted the rights to use and manipulate areas of your network, your applications, or sensitive data, the attacker only has to either penetrate the third party’s defenses or program a loophole into a solution offered by a vendor to infiltrate your system. This makes a supply chain attack one of the most dangerous forms of a network security attack. Supply chain attacks are diverse, impacting large companies, as was the case with the Target security breach, and typically dependable systems, like when automated teller machine (ATM) malware is used to steal cash. They have also been used against governments, as was the case with the Stuxnet computer worm, which was designed to infiltrate Iran’s nuclear facilities.",
         "impact" : "",
         "in simple words" : "",
@@ -327,7 +327,7 @@
     "hash-collision-attack" : {
         "name" : "Hash Collision", 
         "category" : "Cryptography & Encryption",
-        "risk" : "",
+        "risk" : "Medium",
         "description" : "A Hash Collision Attack is an attempt to find two input strings of a hash function that produce the same hash result. Because hash functions have infinite input length and a predefined output length, there is inevitably going to be the possibility of two different inputs that produce the same output hash. If two separate inputs produce the same hash output, it is called a collision. This collision can then be exploited by any application that compares two hashes together – such as password hashes, file integrity checks, etc. The odds of a collision are of course very low, especially so for functions with very large output sizes. However as available computational power increases, the ability to brute force hash collisions becomes more and more feasib",
         "impact" : "",
         "in simple words" : "",
@@ -339,7 +339,7 @@
     "password-cracking" : {
         "name" : "Password Cracking", 
         "category" : "Cryptography & Encryption",
-        "risk" : "",
+        "risk" : "High",
         "description" : "Password cracking (also called password hacking) is an attack vector that involves hackers attempting to crack or determine a password for unauthorized authentication. Password hacking uses a variety of programmatic techniques, manual steps, and automation using specialized tools to compromise a password. These password cracking tools are referred to as ‘password crackers’. Increasingly, these tools are leveraging AI to improve password cracking speed and efficiency. Passwords can also be stolen via other tactics, such as by memory-scraping malware, shoulder surfing, third party breaches, and tools like Redline password stealer. A password can refer to any string of characters or secret used to authenticate an authorized user to a resource. Passwords are typically paired with a username or other mechanism to provide proof of identity. This combination is referred to as credentials.",
         "impact" : "",
         "in simple words" : "",
@@ -351,7 +351,7 @@
     "ssl-striping" : {
         "name" : "SSL Striping", 
         "category" : "Cryptography & Encryption",
-        "risk" : "",
+        "risk" : "High",
         "description" : "SSL stripping is a man-in-the-middle attack that downgrades secure HTTPS connections to HTTP, exposing sensitive user data. This article explains how the attack works and outlines the best technical and strategic measures businesses and users can take to defend against it, such as HSTS enforcement, certificate transparency, and automated certificate management.",
         "impact" : "",
         "in simple words" : "",
@@ -363,7 +363,7 @@
     "downgrade-attack" : {
         "name" : "Downgrade", 
         "category" : "Cryptography & Encryption",
-        "risk" : "",
+        "risk" : "Medium",
         "description" : "Downgrade attacks take advantage of a system’s backward compatibility to force it into less secure modes of operation. Because they can use encrypted or unencrypted connections, systems such as STARTTLS that employ opportunistic encryption are at the greatest risk from downgrade attacks. In general, any system that employs any form of backward compatibility can be susceptible to a downgrade attack. The balance between maximum utility and maximum security is a difficult one to strike: however tempting it may be to enforce your visitors to keep their systems updated, you want people to be able to access your server using older technology.",
         "impact" : "",
         "in simple words" : "",
@@ -375,7 +375,7 @@
     "evil-twin" : {
         "name" : "Evil Twin", 
         "category" : "Wireless",
-        "risk" : "",
+        "risk" : "High",
         "description" : "An evil twin attack takes place when an attacker sets up a fake Wi-Fi access point hoping that users will connect to it instead of a legitimate one. When users connect to this access point, all the data they share with the network passes through a server controlled by the attacker. An attacker can create an evil twin with a smartphone or other internet-capable device and some readily available software. Evil twin attacks are more common on public Wi-Fi networks which are unsecured and leave your personal data vulnerable.",
         "impact" : "",
         "in simple words" : "",
@@ -387,7 +387,7 @@
     "wi-fi-deauthentication" :{
         "name" : "WI-FI Deauthentication", 
         "category" : "Wireless",
-        "risk" : "",
+        "risk" : "Medium",
         "description" : "A deauthentication attack is a type of denial of service attack interfering with communication between routers and devices. It exploits IEEE 802.11 wireless networks as they have the necessary deauthentication frames. Networks use them to end connections or, in other words, disconnect users. The issue begins when networks cannot verify the source of deauth frames. Deauthentication attacks imitate these frames and force targeted users to go offline. Since such Wi-Fi access points do not properly authenticate termination requests, it closes connections. Due to security gaps in management frames, deauth attacks are possible even with modern network security keys (like WPA2). For instance, perpetrators can capture WPA/WPA2 4-way handshake and use commands like aireplay-ng -0 to deauthenticate wireless users.",
         "impact" : "",
         "in simple words" : "",
@@ -399,7 +399,7 @@
     "buffer-overflow" :{
         "name" : "Buffer Overflow", 
         "category" : "Software & Code",
-        "risk" : "",
+        "risk" : "Critical",
         "description" : "A buffer overflow condition exists when a program attempts to put more data in a buffer than it can hold or when a program attempts to put data in a memory area past a buffer. In this case, a buffer is a sequential section of memory allocated to contain anything from a character string to an array of integers. Writing outside the bounds of a block of allocated memory can corrupt data, crash the program, or cause the execution of malicious code.",
         "impact" : "Category:Availability: Buffer overflows generally lead to crashes. Other attacks leading to lack of availability are possible, including putting the program into an infinite loop. Access control (instruction processing): Buffer overflows often can be used to execute arbitrary code, which is usually outside the scope of a program’s implicit security policy. Other: When the consequence is arbitrary code execution, this can often be used to subvert any other security service.",
         "in simple words" : "",
@@ -423,7 +423,7 @@
     "code-injection" : {
         "name" : "Code Injection", 
         "category" : "Software & Code",
-        "risk" : "",
+        "risk" : "Critical",
         "description" : "Code Injection is the general term for attack types which consist of injecting code that is then interpreted/executed by the application. This type of attack exploits poor handling of untrusted data. These types of attacks are usually made possible due to a lack of proper input/output data validation, for example: allowed characters (standard regular expressions classes or custom)data format amount of expected data. Code Injection differs from Command Injection in that an attacker is only limited by the functionality of the injected language itself. If an attacker is able to inject PHP code into an application and have it executed, they are only limited by what PHP is capable of. Command injection consists of leveraging existing code to execute commands, usually within the context of a shell.",
         "impact" : "",
         "in simple words" : "",
