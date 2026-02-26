@@ -2,6 +2,17 @@ document.addEventListener("DOMContentLoaded", () =>{
     loadAttacks();
 });
 
+// if search function is implemented 
+function slugify (text){
+  return text
+    .toLowerCase()      // "SQL Attack" -> "sql attack"
+    .trim()             // Removes accidental spaces at the ends
+    .split(' ')         // Splits into an array: ["sql", "attack"]
+    .filter(word => word !== "") // Removes extra spaces in between words
+    .join('-');         // Joins them back: "sql-attack"
+};
+
+
 async function loadAttacks(){
     try{
         const response = await fetch("http://localhost:8000/attacks");
