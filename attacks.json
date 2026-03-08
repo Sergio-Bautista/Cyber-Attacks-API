@@ -431,16 +431,5 @@
         "remediation" : "",
         "references" : [""],
         "learn more" : ""
-    }, 
-    "unknown" : {
-        "name" : "",
-        "risk" : "",
-        "description" : "",
-        "impact" : "",
-        "in simple words" : "",
-        "cwe_id" : [""],
-        "remediation" : "",
-        "references" : [],
-        "learn more" : ["https://github.com/vitalysim/Awesome-Hacking-Resources?tab=readme-ov-file#sharpening-your-skills", "https://github.com/Z4nzu/hackingtool"]
     }
 }
