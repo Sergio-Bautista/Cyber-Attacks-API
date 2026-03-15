@@ -1,0 +1,1084 @@
+{
+  "attacks_quiz": {
+    "sql-injection": {
+      "attack_name": "SQL Injection",
+      "questions": [
+        {
+          "question": "What is the primary method used in an SQL Injection attack?",
+          "options": ["Injecting malicious scripts into a browser", "Inserting a SQL query via client input data", "Flooding a server with traffic", "Physically looking over someone's shoulder"],
+          "answer": "Inserting a SQL query via client input data"
+        },
+        {
+          "question": "Which of these is a potential impact of a successful SQL injection?",
+          "options": ["Reading sensitive database data", "Modifying database records", "Executing admin operations", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "question": "In 'simple words,' what does an SQL attack allow an attacker to bypass?",
+          "options": ["Physical security", "The security of the database", "The user's ISP", "The browser's firewall"],
+          "answer": "The security of the database"
+        },
+        {
+          "question": "What is the associated CWE ID for SQL Injection?",
+          "options": ["CWE-79", "CWE-89", "CWE-352", "CWE-94"],
+          "answer": "CWE-89"
+        },
+        {
+          "question": "Which remediation step helps prevent SQLi by limiting account permissions?",
+          "options": ["Input validation", "Giving least privilege to database accounts", "Installing antivirus", "Using a VPN"],
+          "answer": "Giving least privilege to database accounts"
+        }
+      ]
+    },
+    "cross-site-scripting": {
+      "attack_name": "Cross Site Scripting (XSS)",
+      "questions": [
+        {
+          "question": "What does an attacker inject in a Cross-Site Scripting (XSS) attack?",
+          "options": ["SQL queries", "Malicious browser-side scripts", "Operating system commands", "Excel formulas"],
+          "answer": "Malicious browser-side scripts"
+        },
+        {
+          "question": "Why does a browser execute the malicious code in an XSS attack?",
+          "options": ["The browser is outdated", "The browser has no way to know the code is untrusted", "The user clicked 'Allow'", "The script is encrypted"],
+          "answer": "The browser has no way to know the code is untrusted"
+        },
+        {
+          "question": "What sensitive information can be stolen during an XSS attack?",
+          "options": ["Session tokens", "Browser cookies", "Sensitive info in the browser", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "question": "How should data be handled to remediate XSS?",
+          "options": ["It should be deleted", "It should be encoded (HTML or JS)", "It should be compressed", "It should be hidden"],
+          "answer": "It should be encoded (HTML or JS)"
+        },
+        {
+          "question": "What is the risk level for XSS as stated in the documentation?",
+          "options": ["Low", "Medium", "High", "Critical"],
+          "answer": "High"
+        }
+      ]
+    },
+    "cross-site-request-forgery": {
+      "attack_name": "Cross Site Request Forgery (CSRF)",
+      "questions": [
+        {
+          "question": "What does a CSRF attack force an end user to do?",
+          "options": ["Log out of an application", "Execute unwanted actions while authenticated", "Download a keylogger", "Change their hardware"],
+          "answer": "Execute unwanted actions while authenticated"
+        },
+        {
+          "question": "What can happen if a CSRF attack is performed on an administrative account?",
+          "options": ["It can compromise entire web applications", "It only affects the CSS", "It speeds up the server", "Nothing happens"],
+          "answer": "It can compromise entire web applications"
+        },
+        {
+          "question": "What is a common social engineering tactic used for CSRF?",
+          "options": ["Calling the user", "Sending a link like 'cute cat pictures'", "Shoulder surfing", "Brute forcing"],
+          "answer": "Sending a link like 'cute cat pictures'"
+        },
+        {
+          "question": "What is the primary remediation for CSRF?",
+          "options": ["Using a VPN", "CSRF tokens and better cookie management", "Input validation", "Installing a firewall"],
+          "answer": "CSRF tokens and better cookie management"
+        },
+        {
+          "question": "Which CWE ID is linked to CSRF?",
+          "options": ["CWE-89", "CWE-79", "CWE-352", "CWE-22"],
+          "answer": "CWE-352"
+        }
+      ]
+    },
+    "server-side-request-forgery": {
+      "attack_name": "Server Side Request Forgery (SSRF)",
+      "questions": [
+        {
+          "question": "In an SSRF attack, what does the attacker modify to make the server read data?",
+          "options": ["A cookie", "A URL", "A CSS file", "The BIOS"],
+          "answer": "A URL"
+        },
+        {
+          "question": "In 'simple words,' SSRF works similarly to which other attack?",
+          "options": ["Phishing", "Path Traversal", "Shoulder Surfing", "Packet Sniffing"],
+          "answer": "Path Traversal"
+        },
+        {
+          "question": "What can an attacker read from the server during an SSRF attack?",
+          "options": ["Metadata configuration", "Internal resources", "Unauthorized data", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "question": "Which remediation involves restricting which IPs the server can talk to?",
+          "options": ["Allow lists for authorized hosts/IPs", "Enabling MFA", "Clearing DNS cache", "Hard drive encryption"],
+          "answer": "Allow lists for authorized hosts/IPs"
+        },
+        {
+          "question": "What is the risk level assigned to SSRF?",
+          "options": ["Low", "Medium", "High", "Critical"],
+          "answer": "Critical"
+        }
+      ]
+    },
+    "command-injection": {
+      "attack_name": "Command Injection",
+      "questions": [
+        {
+          "question": "What is the goal of a Command Injection attack?",
+          "options": ["To inject PHP code", "To execute arbitrary commands on the host OS", "To guess a password", "To record keystrokes"],
+          "answer": "To execute arbitrary commands on the host OS"
+        },
+        {
+          "question": "Where does unsafe user-supplied data typically come from in this attack?",
+          "options": ["Forms and cookies", "HTTP headers", "System shells", "Both A and B"],
+          "answer": "Both A and B"
+        },
+        {
+          "question": "How does Command Injection differ from Code Injection?",
+          "options": ["Command Injection injects new code", "Command Injection extends default system command functionality", "There is no difference", "Command Injection only works on Wi-Fi"],
+          "answer": "Command Injection extends default system command functionality"
+        },
+        {
+          "question": "What privileges are attacker commands usually executed with?",
+          "options": ["Guest privileges", "The privileges of the vulnerable application", "Kernel-level privileges only", "The user's browser privileges"],
+          "answer": "The privileges of the vulnerable application"
+        },
+        {
+          "question": "Which CWE IDs are associated with Command Injection?",
+          "options": ["CWE-89", "CWE-77 and CWE-78", "CWE-22", "CWE-307"],
+          "answer": "CWE-77 and CWE-78"
+        }
+      ]
+    },
+    "directory-traversal": {
+      "attack_name": "Directory/Path Traversal",
+      "questions": [
+        {
+          "question": "What is the goal of a Path Traversal attack?",
+          "options": ["To crash the server", "To access files outside the web root folder", "To steal Wi-Fi passwords", "To intercept packets"],
+          "answer": "To access files outside the web root folder"
+        },
+        {
+          "question": "Which character sequence is commonly used in a path traversal attack?",
+          "options": ["<script>", "OR 1=1", "../", "&& system()"],
+          "answer": "../"
+        },
+        {
+          "question": "What is another common name for this attack?",
+          "options": ["Directory climbing", "Phishing", "Brute force", "Keylogging"],
+          "answer": "Directory climbing"
+        },
+        {
+          "question": "What limits an attacker's ability to access files during this attack?",
+          "options": ["The user's browser", "System operational access controls", "The size of the hard drive", "The internet speed"],
+          "answer": "System operational access controls"
+        },
+        {
+          "question": "What is a recommended remediation step before making an API call with user input?",
+          "options": ["Normalize the input data", "Delete the input", "Encrypt the entire database", "Restart the server"],
+          "answer": "Normalize the input data"
+        }
+      ]
+    },
+    "brute-force-attack": {
+      "attack_name": "Brute Force Attack",
+      "questions": [
+        {
+          "question": "How does a primary Brute Force attack operate?",
+          "options": ["Sending phishing emails", "Trying predetermined combinations of values", "Physical theft", "Eavesdropping on a conversation"],
+          "answer": "Trying predetermined combinations of values"
+        },
+        {
+          "question": "What is a 'Dictionary Attack'?",
+          "options": ["Using a dictionary to find word definitions", "A brute force method using a list of likely passwords", "A social engineering attack", "A type of ransomware"],
+          "answer": "A brute force method using a list of likely passwords"
+        },
+        {
+          "question": "What is a common impact of a successful brute force attack?",
+          "options": ["Discovering hidden content pages", "Crashing the physical server", "Encrypting user files", "Stealing Wi-Fi frames"],
+          "answer": "Discovering hidden content pages"
+        },
+        {
+          "question": "Which remediation policy stops an attack after a certain number of failed attempts?",
+          "options": ["Account lockout policy", "Weak password policy", "Data deletion policy", "Open network policy"],
+          "answer": "Account lockout policy"
+        },
+        {
+          "question": "What is the risk level for Brute Force attacks?",
+          "options": ["Low", "Medium", "High", "Critical"],
+          "answer": "Medium"
+        }
+      ]
+    },
+    "credential-stuffing": {
+      "attack_name": "Credential Stuffing",
+      "questions": [
+        {
+          "question": "How is Credential Stuffing different from standard Brute Forcing?",
+          "options": ["It uses known/breached username-password pairs", "It involves physical hardware", "It only targets Wi-Fi", "It requires no software"],
+          "answer": "It uses known/breached username-password pairs"
+        },
+        {
+          "question": "Why is Credential Stuffing effective across multiple websites?",
+          "options": ["Attackers are fast", "Users often re-use the same passwords", "Browsers are weak", "It uses AI"],
+          "answer": "Users often re-use the same passwords"
+        },
+        {
+          "question": "Besides login forms, what else can attackers use breached data for?",
+          "options": ["To reset passwords using security questions", "To speed up the internet", "To physically open doors", "To create new Wi-Fi spots"],
+          "answer": "To reset passwords using security questions"
+        },
+        {
+          "question": "What is a highly recommended remediation for Credential Stuffing?",
+          "options": ["Using simple passwords", "Implementing Double-Factor Authentication", "Disabling cookies", "Using older browsers"],
+          "answer": "Implementing Double-Factor Authentication"
+        },
+        {
+          "question": "Credential Stuffing is a subset of which attack category?",
+          "options": ["XSS", "Brute Force", "Phishing", "DoS"],
+          "answer": "Brute Force"
+        }
+      ]
+    },
+    "session-hijacking": {
+      "attack_name": "Session Hijacking",
+      "questions": [
+        {
+          "question": "What specific item does an attacker steal or predict in Session Hijacking?",
+          "options": ["The user's BIOS", "A valid session token", "The physical router", "The computer monitor"],
+          "answer": "A valid session token"
+        },
+        {
+          "question": "Why do web servers use session tokens?",
+          "options": ["To make the site look better", "To recognize a user's connections across multiple TCP connections", "To encrypt the hard drive", "To block IP addresses"],
+          "answer": "To recognize a user's connections across multiple TCP connections"
+        },
+        {
+          "question": "Which common web attack can lead to Session Hijacking?",
+          "options": ["XSS", "Brute Force", "Shoulder Surfing", "DoS"],
+          "answer": "XSS"
+        },
+        {
+          "question": "Where can a session token be found in an HTTP request?",
+          "options": ["In the URL", "In the cookie header", "In the body of the requisition", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "question": "What is a recommended remediation for session hijacking?",
+          "options": ["Using weak passwords", "Using a VPN", "Turning off the monitor", "Using open Wi-Fi"],
+          "answer": "Using a VPN"
+        }
+      ]
+    },
+    "broken-access-control": {
+      "attack_name": "Broken Access Control",
+      "questions": [
+        {
+          "question": "What is 'Access Control' in a web application?",
+          "options": ["How a site grants access to content and functions", "The speed of the server", "The physical lock on the server room", "The color of the website"],
+          "answer": "How a site grants access to content and functions"
+        },
+        {
+          "question": "When are access control checks performed?",
+          "options": ["Before the user visits the site", "After authentication", "During the BIOS boot", "Only on Sundays"],
+          "answer": "After authentication"
+        },
+        {
+          "question": "Why is access control difficult to implement correctly?",
+          "options": ["Rules are often scattered throughout the code", "It is a new technology", "It requires physical keys", "It only works on Windows"],
+          "answer": "Rules are often scattered throughout the code"
+        },
+        {
+          "question": "What is a common 'prime target' for access control attacks?",
+          "options": ["The 'About Us' page", "Administrative interfaces", "The browser's bookmarks", "The CSS file"],
+          "answer": "Administrative interfaces"
+        },
+        {
+          "question": "What is the risk level for Broken Access Control?",
+          "options": ["Low", "Medium", "High", "Critical"],
+          "answer": "Critical"
+        }
+      ]
+    },
+    "phishing": {
+      "attack_name": "Phishing",
+      "questions": [
+        {
+          "question": "What is the typical delivery method for a Phishing attack?",
+          "options": ["Direct physical mail", "Emails that appear to be from a well-known source", "Installing a hardware device", "Modifying DNS records"],
+          "answer": "Emails that appear to be from a well-known source"
+        },
+        {
+          "question": "What is the primary goal of a phishing scam?",
+          "options": ["To trick consumers into providing personal identifying information", "To crash a server", "To fix a software bug", "To increase website traffic"],
+          "answer": "To trick consumers into providing personal identifying information"
+        },
+        {
+          "question": "How do scammers use information stolen from phishing?",
+          "options": ["To open new accounts or invade existing ones", "To update the victim's OS", "To improve the bank's security", "To help the user find a job"],
+          "answer": "To open new accounts or invade existing ones"
+        },
+        {
+          "question": "What is a common 'red flag' in a phishing email?",
+          "options": ["Misspelled words", "Fake names", "Suspicious sender info", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "question": "Which technical tool can help remediate phishing?",
+          "options": ["Email filters to detect known signs", "A faster CPU", "A bigger monitor", "Clearing the browser history"],
+          "answer": "Email filters to detect known signs"
+        }
+      ]
+    },
+    "spear-phishing": {
+      "attack_name": "Spear Phishing",
+      "questions": [
+        {
+          "question": "What is the main difference between Phishing and Spear Phishing?",
+          "options": ["Spear Phishing targets a specific individual or group", "Spear Phishing only uses phone calls", "Spear Phishing is safe", "There is no difference"],
+          "answer": "Spear Phishing targets a specific individual or group"
+        },
+        {
+          "question": "Which medium can be used for Spear Phishing?",
+          "options": ["Email messages", "Text messages", "Chat apps or phone calls", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "question": "What is the goal of the 'personalized stories' in Spear Phishing?",
+          "options": ["To trick victims into divulging sensitive data", "To entertain the user", "To promote a new book", "To provide customer support"],
+          "answer": "To trick victims into divulging sensitive data"
+        },
+        {
+          "question": "Remediation for Spear Phishing is mostly the same as which other attack?",
+          "options": ["SQL Injection", "Normal Phishing", "Buffer Overflow", "ARP Spoofing"],
+          "answer": "Normal Phishing"
+        },
+        {
+          "question": "What is the risk level for Spear Phishing?",
+          "options": ["Low", "Medium", "High", "Critical"],
+          "answer": "High"
+        }
+      ]
+    },
+    "pretexting": {
+      "attack_name": "Pretexting",
+      "questions": [
+        {
+          "question": "What does 'Pretexting' rely on to trick a victim?",
+          "options": ["A fabricated story or 'pretext'", "A software bug", "A brute force script", "A hardware keylogger"],
+          "answer": "A fabricated story or 'pretext'"
+        },
+        {
+          "question": "What is a common harm caused by Pretexting?",
+          "options": ["Manipulating employees into sharing sensitive info", "Speeding up the internet", "Fixing a broken link", "Improving server availability"],
+          "answer": "Manipulating employees into sharing sensitive info"
+        },
+        {
+          "question": "The danger of pretexting is that the story is...",
+          "options": ["Completely unbelievable", "Believable to the target", "Written in code", "Publicly available"],
+          "answer": "Believable to the target"
+        },
+        {
+          "question": "What is a recommended remediation against Pretexting?",
+          "options": ["Always double check before believing anything", "Sharing info immediately", "Downloading everything", "Ignoring security alerts"],
+          "answer": "Always double check before believing anything"
+        },
+        {
+          "question": "Which CWE ID is linked to Pretexting?",
+          "options": ["CWE-89", "CWE-290", "CWE-352", "CWE-79"],
+          "answer": "CWE-290"
+        }
+      ]
+    },
+    "keylogger": {
+      "attack_name": "Keylogger",
+      "questions": [
+        {
+          "question": "What is the function of a Keylogger?",
+          "options": ["To monitor and record keystrokes", "To speed up the keyboard", "To fix typing errors", "To block the internet"],
+          "answer": "To monitor and record keystrokes"
+        },
+        {
+          "question": "In what two forms can a keylogger exist?",
+          "options": ["Software or Hardware", "Digital or Analog", "Internal or External only", "Windows or Linux only"],
+          "answer": "Software or Hardware"
+        },
+        {
+          "question": "How does a software keylogger typically spread?",
+          "options": ["As a Trojan malware", "Via physical mail", "As a BIOS update", "Through a TV signal"],
+          "answer": "As a Trojan malware"
+        },
+        {
+          "question": "What should you do if you suspect a keylogger is present?",
+          "options": ["Change your passwords", "Type faster", "Ignore it", "Buy a new monitor"],
+          "answer": "Change your passwords"
+        },
+        {
+          "question": "What can usually detect and remove software keyloggers?",
+          "options": ["Antivirus software", "A physical lock", "A VPN", "A privacy screen"],
+          "answer": "Antivirus software"
+        }
+      ]
+    },
+    "ransomware": {
+      "attack_name": "Ransomware",
+      "questions": [
+        {
+          "question": "What is the primary action taken by Ransomware?",
+          "options": ["Prevents access to files and demands a ransom", "Speeds up the computer", "Fixes software bugs", "Sends marketing emails"],
+          "answer": "Prevents access to files and demands a ransom"
+        },
+        {
+          "question": "How do 'menacing' versions of ransomware ensure you can't access data?",
+          "options": ["By encrypting files and folders", "By changing the desktop wallpaper", "By turning off the monitor", "By deleting the browser history"],
+          "answer": "By encrypting files and folders"
+        },
+        {
+          "question": "When does a user usually discover they are infected with ransomware?",
+          "options": ["When they can no longer access data", "When they see a demand for payment", "Both A and B", "Never"],
+          "answer": "Both A and B"
+        },
+        {
+          "question": "Is unlocking files guaranteed after paying the ransom?",
+          "options": ["Yes, always", "No, it is not guaranteed", "Only on Windows", "Only for banks"],
+          "answer": "No, it is not guaranteed"
+        },
+        {
+          "question": "What is a vital remediation step for ransomware?",
+          "options": ["Regularly back up important files", "Using old software", "Downloading random email attachments", "Sharing passwords"],
+          "answer": "Regularly back up important files"
+        }
+      ]
+    },
+    "trojan-horses": {
+      "attack_name": "Trojan Horse",
+      "questions": [
+        {
+          "question": "What does a Trojan Horse disguise itself as?",
+          "options": ["Legitimate code or software", "A computer virus", "A firewall", "An antivirus update"],
+          "answer": "Legitimate code or software"
+        },
+        {
+          "question": "What can an attacker do once a Trojan is inside a network?",
+          "options": ["Any action a legitimate user could perform", "Only see the time", "Only delete the desktop icons", "Nothing"],
+          "answer": "Any action a legitimate user could perform"
+        },
+        {
+          "question": "Where might a Trojan be packaged?",
+          "options": ["Game downloads", "Software patches", "Apps or tools", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "question": "What tactics do Trojan attacks often leverage?",
+          "options": ["Social engineering and phishing", "Brute force only", "Physical theft", "Shoulder surfing only"],
+          "answer": "Social engineering and phishing"
+        },
+        {
+          "question": "What is a recommended remediation against Trojans?",
+          "options": ["Never download untrusted files from the internet", "Always click every link", "Disable the firewall", "Use weak passwords"],
+          "answer": "Never download untrusted files from the internet"
+        }
+      ]
+    },
+    "spyware": {
+      "attack_name": "Spyware",
+      "questions": [
+        {
+          "question": "What is another term often used for Spyware in the advertising industry?",
+          "options": ["Adware", "Freeware", "Malware", "Firmware"],
+          "answer": "Adware"
+        },
+        {
+          "question": "What is the primary behavior of typical spyware?",
+          "options": ["Sending pop-up ads and monitoring visits", "Deleting the hard drive", "Fixing computer errors", "Speeding up the CPU"],
+          "answer": "Sending pop-up ads and monitoring visits"
+        },
+        {
+          "question": "What invasive action might extreme spyware take?",
+          "options": ["Tracking exactly what keys you type", "Changing the physical hardware", "Turning off the server", "None of the above"],
+          "answer": "Tracking exactly what keys you type"
+        },
+        {
+          "question": "How does spyware help advertisers?",
+          "options": ["By gathering info for targeted advertisements", "By making the website faster", "By blocking competitor ads", "By providing free products"],
+          "answer": "By gathering info for targeted advertisements"
+        },
+        {
+          "question": "What is a suggested remediation for spyware?",
+          "options": ["Keep the computer up to date and clean regularly", "Disable all security updates", "Use public Wi-Fi only", "Share your browser history"],
+          "answer": "Keep the computer up to date and clean regularly"
+        }
+      ]
+    },
+    "man-in-the-middle": {
+      "attack_name": "Man-In-The-Middle (MITM)",
+      "questions": [
+        {
+          "question": "Where does a perpetrator position themselves in a MITM attack?",
+          "options": ["Between a user and an application", "Inside the physical keyboard", "In the user's house", "On the moon"],
+          "answer": "Between a user and an application"
+        },
+        {
+          "question": "What are the two main things an attacker does in the 'middle'?",
+          "options": ["Eavesdrop or impersonate a party", "Fix the connection", "Speed up the data transfer", "Delete the browser history"],
+          "answer": "Eavesdrop or impersonate a party"
+        },
+        {
+          "question": "Which type of websites are common targets for MITM?",
+          "options": ["Financial apps and e-commerce sites", "Public libraries", "Personal blogs", "News sites"],
+          "answer": "Financial apps and e-commerce sites"
+        },
+        {
+          "question": "What happens if the data in a MITM attack is not encrypted?",
+          "options": ["The attacker can see all sensitive information", "The connection fails", "The server crashes", "The data becomes scrambled"],
+          "answer": "The attacker can see all sensitive information"
+        },
+        {
+          "question": "What is a key remediation for preventing MITM?",
+          "options": ["Implement strong encryption and authentication", "Disable the firewall", "Use unsecured Wi-Fi", "Share passwords"],
+          "answer": "Implement strong encryption and authentication"
+        }
+      ]
+    },
+    "dns-spoofing": {
+      "attack_name": "DNS Spoofing",
+      "questions": [
+        {
+          "question": "How does DNS Spoofing redirect users?",
+          "options": ["By compromising DNS records and manipulating IP addresses", "By physically moving the server", "By changing the computer's time", "By sending a text message"],
+          "answer": "By compromising DNS records and manipulating IP addresses"
+        },
+        {
+          "question": "What is 'Cache Poisoning' in DNS?",
+          "options": ["Poisoning the physical server", "Manipulating a resolver's cache with fake IP addresses", "Deleting the browser cache", "Speeding up DNS resolution"],
+          "answer": "Manipulating a resolver's cache with fake IP addresses"
+        },
+        {
+          "question": "What is a dangerous outcome of visiting a counterfeit website via DNS spoofing?",
+          "options": ["Theft of data or malware installation", "Improving computer performance", "Finding a new friend", "Updating the software"],
+          "answer": "Theft of data or malware installation"
+        },
+        {
+          "question": "Which remediation step helps an affected system?",
+          "options": ["Flushing the DNS cache", "Buying a new router", "Deleting the entire hard drive", "Changing the monitor"],
+          "answer": "Flushing the DNS cache"
+        },
+        {
+          "question": "What is the risk level for DNS Spoofing?",
+          "options": ["Low", "Medium", "High", "Critical"],
+          "answer": "High"
+        }
+      ]
+    },
+    "arp-spoofing": {
+      "attack_name": "ARP Spoofing",
+      "questions": [
+        {
+          "question": "What is the role of ARP in a local network?",
+          "options": ["To resolve IP addresses to MAC addresses", "To speed up the internet", "To block external users", "To monitor electricity usage"],
+          "answer": "To resolve IP addresses to MAC addresses"
+        },
+        {
+          "question": "How does an attacker perform ARP Spoofing?",
+          "options": ["By sending spoofed messages to link their MAC to a target's IP", "By changing the physical cables", "By using a telescope", "By guessing passwords"],
+          "answer": "By sending spoofed messages to link their MAC to a target's IP"
+        },
+        {
+          "question": "What is the aim of an ARP spoofing attack in 'simple words'?",
+          "options": ["To inspect, modify, or stop traffic", "To fix the router", "To increase bandwidth", "To clear the ARP table"],
+          "answer": "To inspect, modify, or stop traffic"
+        },
+        {
+          "question": "Which advanced attack can ARP spoofing lead to?",
+          "options": ["MITM or Session Hijacking", "SQL Injection", "Shoulder Surfing", "Brute Force"],
+          "answer": "MITM or Session Hijacking"
+        },
+        {
+          "question": "What feature can be enabled on switches to remediate this?",
+          "options": ["Dynamic ARP Inspection (DAI)", "Auto-connect", "Password hashing", "Screen protection"],
+          "answer": "Dynamic ARP Inspection (DAI)"
+        }
+      ]
+    },
+    "packet-sniffing": {
+      "attack_name": "Packet Sniffing",
+      "questions": [
+        {
+          "question": "What are 'packets' in computer networking?",
+          "options": ["Units of data exchanged between computers", "Physical pieces of mail", "The internal CPU components", "The plastic casing of a router"],
+          "answer": "Units of data exchanged between computers"
+        },
+        {
+          "question": "When is packet sniffing considered 'good'?",
+          "options": ["When an IT team uses it to keep an organization safe", "When a hacker uses it", "Never", "Only on Sundays"],
+          "answer": "When an IT team uses it to keep an organization safe"
+        },
+        {
+          "question": "What makes a packet sniffing attack malicious?",
+          "options": ["Data goes directly to a hacker instead of secure storage", "It slows down the computer", "It uses too much electricity", "It deletes files"],
+          "answer": "Data goes directly to a hacker instead of secure storage"
+        },
+        {
+          "question": "What information can be found in intercepted packets?",
+          "options": ["Login info, IP addresses, and message text", "The color of the computer", "The user's age", "The weather forecast"],
+          "answer": "Login info, IP addresses, and message text"
+        },
+        {
+          "question": "What is the primary remediation to make sniffed packets useless?",
+          "options": ["Using strong encryption", "Using shorter passwords", "Turning off the Wi-Fi", "Clearing the history"],
+          "answer": "Using strong encryption"
+        }
+      ]
+    },
+    "denial-of-service": {
+      "attack_name": "Denial Of Service (DoS)",
+      "questions": [
+        {
+          "question": "What is the result of a DoS attack for legitimate users?",
+          "options": ["They are unable to access resources", "The internet becomes faster", "They get free software", "The computer reboots"],
+          "answer": "They are unable to access resources"
+        },
+        {
+          "question": "How is a DoS condition physically accomplished?",
+          "options": ["By flooding a target with traffic", "By stealing the server", "By cutting the power", "By guessing the password"],
+          "answer": "By flooding a target with traffic"
+        },
+        {
+          "question": "What can a DoS attack cost an organization?",
+          "options": ["Time and money", "New office chairs", "Coffee beans", "Physical keys"],
+          "answer": "Time and money"
+        },
+        {
+          "question": "Which tool can be used to block malicious IPs in a DoS attack?",
+          "options": ["Firewall", "Keyboard", "Printer", "Monitor"],
+          "answer": "Firewall"
+        },
+        {
+          "question": "What is the risk level for a standard DoS attack?",
+          "options": ["Low", "Medium", "High", "Critical"],
+          "answer": "Medium"
+        }
+      ]
+    },
+    "distributed-denial-of-service": {
+      "attack_name": "Distributed Denial Of Service (DDoS)",
+      "questions": [
+        {
+          "question": "What is the main difference between DoS and DDoS?",
+          "options": ["DDoS comes from multiple sources simultaneously", "DDoS only uses one computer", "DDoS is safer", "DDoS is free"],
+          "answer": "DDoS comes from multiple sources simultaneously"
+        },
+        {
+          "question": "Why is a DDoS attack harder to stop?",
+          "options": ["The volume of requests is greater and spread out", "It uses invisible packets", "It only happens at night", "It targets the physical user"],
+          "answer": "The volume of requests is greater and spread out"
+        },
+        {
+          "question": "What happens to 'legitimate traffic' during a DDoS?",
+          "options": ["It cannot get through because the system is overloaded", "It is prioritized", "It is deleted forever", "It is redirected to Google"],
+          "answer": "It cannot get through because the system is overloaded"
+        },
+        {
+          "question": "The impact of a DDoS is essentially the same as a...",
+          "options": ["Normal DoS, just on a larger scale", "SQL Injection", "Phishing email", "Shoulder Surfing"],
+          "answer": "Normal DoS, just on a larger scale"
+        },
+        {
+          "question": "What is the risk level for a DDoS attack?",
+          "options": ["Low", "Medium", "High", "Critical"],
+          "answer": "High"
+        }
+      ]
+    },
+    "insider-threat": {
+      "attack_name": "Insider Threat",
+      "questions": [
+        {
+          "question": "Who is considered an 'insider'?",
+          "options": ["Anyone with authorized access to organization resources", "A random person on the street", "A foreign hacker", "An AI"],
+          "answer": "Anyone with authorized access to organization resources"
+        },
+        {
+          "question": "Which of these could be an insider?",
+          "options": ["Employee", "Contractor", "Custodian with a badge", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "question": "What is a common motivation for an insider threat?",
+          "options": ["Getting fired or personal grievances", "Trying to help the company", "Fixing a computer bug", "Testing the firewall"],
+          "answer": "Getting fired or personal grievances"
+        },
+        {
+          "question": "What is a major impact of an insider threat?",
+          "options": ["Leaking sensitive information to competitors", "Improving the company's stock", "Making the office cleaner", "Faster network speeds"],
+          "answer": "Leaking sensitive information to competitors"
+        },
+        {
+          "question": "What is a remediation step for dealing with an insider threat?",
+          "options": ["Investigations and forensics", "Hiring more insiders", "Sharing more passwords", "Disabling the firewall"],
+          "answer": "Investigations and forensics"
+        }
+      ]
+    },
+    "shoulder-surfing": {
+      "attack_name": "Shoulder Surfing",
+      "questions": [
+        {
+          "question": "What physical action defines 'Shoulder Surfing'?",
+          "options": ["Viewing a device screen/keypad while standing nearby", "Surfing the internet at the beach", "Wearing a computer on your shoulder", "Using a long ethernet cable"],
+          "answer": "Viewing a device screen/keypad while standing nearby"
+        },
+        {
+          "question": "What optical devices might an attacker use?",
+          "options": ["Binoculars or miniature cameras", "A microscope", "X-ray goggles", "Reading glasses only"],
+          "answer": "Binoculars or miniature cameras"
+        },
+        {
+          "question": "When might shoulder surfing occur *without* malicious intent?",
+          "options": ["In the case of nosy people invading privacy", "During a bank robbery", "During a hackathon", "Never"],
+          "answer": "In the case of nosy people invading privacy"
+        },
+        {
+          "question": "Which of these is a physical remediation for this attack?",
+          "options": ["Privacy screen protectors", "A faster processor", "A VPN", "A software firewall"],
+          "answer": "Privacy screen protectors"
+        },
+        {
+          "question": "What is the risk level for Shoulder Surfing?",
+          "options": ["Low", "Medium", "High", "Critical"],
+          "answer": "Low"
+        }
+      ]
+    },
+    "zero-day-exploit": {
+      "attack_name": "Zero Day Exploit",
+      "questions": [
+        {
+          "question": "What does 'Zero Day' refer to in this exploit?",
+          "options": ["The vendor has zero days to fix the flaw before it's used", "The attack lasts zero days", "The exploit costs zero dollars", "It happens on the 0th day of the month"],
+          "answer": "The vendor has zero days to fix the flaw before it's used"
+        },
+        {
+          "question": "Why is a Zero Day exploit dangerous?",
+          "options": ["It can compromise a system before any defense exists", "It is always done by insiders", "It only affects old computers", "It is harmless"],
+          "answer": "It can compromise a system before any defense exists"
+        },
+        {
+          "question": "What type of flaws do zero-day attacks target?",
+          "options": ["Unknown or unaddressed flaws", "Known bugs with patches", "Physical hardware theft", "The color of the UI"],
+          "answer": "Unknown or unaddressed flaws"
+        },
+        {
+          "question": "Which tool is a technical remediation for Zero Day attacks?",
+          "options": ["Endpoint Detection and Response (EDR)", "A standard mouse", "A floppy disk", "A paper notebook"],
+          "answer": "Endpoint Detection and Response (EDR)"
+        },
+        {
+          "question": "What is the risk level for a Zero Day exploit?",
+          "options": ["Low", "Medium", "High", "Critical"],
+          "answer": "Critical"
+        }
+      ]
+    },
+    "supply-chain-attack": {
+      "attack_name": "Supply Chain Attack",
+      "questions": [
+        {
+          "question": "How does an attacker gain access in a Supply Chain attack?",
+          "options": ["Using an outside provider with access to your systems", "By sending a single phishing email to the CEO", "By stealing the physical server", "By guessing the Wi-Fi password"],
+          "answer": "Using an outside provider with access to your systems"
+        },
+        {
+          "question": "Why is this attack so dangerous?",
+          "options": ["The attacker only needs to penetrate a third party's defenses", "It is impossible to detect", "It only affects food supply", "It doesn't use computers"],
+          "answer": "The attacker only needs to penetrate a third party's defenses"
+        },
+        {
+          "question": "What was a famous historical example of a supply chain attack?",
+          "options": ["The Stuxnet computer worm", "The invention of the mouse", "The release of Windows 95", "The first email ever sent"],
+          "answer": "The Stuxnet computer worm"
+        },
+        {
+          "question": "What is a consequence of a supply chain attack for a company?",
+          "options": ["Financial losses from system downtime", "Increased customer trust", "Faster software updates", "Free advertising"],
+          "answer": "Financial losses from system downtime"
+        },
+        {
+          "question": "What is a recommended remediation for detecting these attacks?",
+          "options": ["Signature validation and EDR", "Buying more computers", "Using open networks", "Sharing more data"],
+          "answer": "Signature validation and EDR"
+        }
+      ]
+    },
+    "hash-collision-attack": {
+      "attack_name": "Hash Collision Attack",
+      "questions": [
+        {
+          "question": "What is the goal of a Hash Collision Attack?",
+          "options": ["To find two different inputs with the same hash result", "To find the same input for two hashes", "To delete the hash table", "To speed up hashing"],
+          "answer": "To find two different inputs with the same hash result"
+        },
+        {
+          "question": "Why is a collision possible in hash functions?",
+          "options": ["Infinite input vs. finite output length", "The functions are broken", "Computers make mistakes", "It is only possible on Linux"],
+          "answer": "Infinite input vs. finite output length"
+        },
+        {
+          "question": "What can an attacker compromise by creating a collision?",
+          "options": ["File integrity checks or digital signatures", "The physical monitor", "The user's age", "The network speed"],
+          "answer": "File integrity checks or digital signatures"
+        },
+        {
+          "question": "Why is this attack becoming more feasible?",
+          "options": ["Available computational power is increasing", "Passwords are getting shorter", "The internet is smaller", "Hashing is no longer used"],
+          "answer": "Available computational power is increasing"
+        },
+        {
+          "question": "What is a robust remediation against this attack?",
+          "options": ["Use a robust hash function", "Use shorter strings", "Disable hashing", "Use a physical key"],
+          "answer": "Use a robust hash function"
+        }
+      ]
+    },
+    "password-cracking": {
+      "attack_name": "Password Cracking",
+      "questions": [
+        {
+          "question": "What are specialized tools used in password hacking called?",
+          "options": ["Password crackers", "Key makers", "Code breakers", "Login helpers"],
+          "answer": "Password crackers"
+        },
+        {
+          "question": "How are these tools improving their speed?",
+          "options": ["By leveraging AI technologies", "By using more batteries", "By typing faster", "By using bigger screens"],
+          "answer": "By leveraging AI technologies"
+        },
+        {
+          "question": "What is 'Credentials' a combination of?",
+          "options": ["Username and Password", "First and Last Name", "Email and Phone Number", "IP and MAC Address"],
+          "answer": "Username and Password"
+        },
+        {
+          "question": "Besides automation, how else can passwords be stolen?",
+          "options": ["Memory-scraping malware or shoulder surfing", "By asking nicely", "Through the TV", "From the physical mouse"],
+          "answer": "Memory-scraping malware or shoulder surfing"
+        },
+        {
+          "question": "What is a key defensive coding practice for storing passwords?",
+          "options": ["Hashing and salting", "Storing in plain text", "Writing them on paper", "Sending them via email"],
+          "answer": "Hashing and salting"
+        }
+      ]
+    },
+    "ssl-striping": {
+      "attack_name": "SSL Striping",
+      "questions": [
+        {
+          "question": "What 'downgrade' happens in an SSL Striping attack?",
+          "options": ["HTTPS to HTTP", "HTTP to HTTPS", "Wi-Fi to Ethernet", "4G to 3G"],
+          "answer": "HTTPS to HTTP"
+        },
+        {
+          "question": "Who is at particularly high risk for this while traveling?",
+          "options": ["Employees using unsecured Wi-Fi hotspots", "People staying at home", "Users of wired connections", "People without computers"],
+          "answer": "Employees using unsecured Wi-Fi hotspots"
+        },
+        {
+          "question": "SSL Striping is considered a form of which attack?",
+          "options": ["Man-In-The-Middle (MITM)", "SQL Injection", "Shoulder Surfing", "Brute Force"],
+          "answer": "Man-In-The-Middle (MITM)"
+        },
+        {
+          "question": "What does the attacker gain by downgrading the connection?",
+          "options": ["Ability to intercept sensitive data", "A faster connection", "A free VPN", "Nothing"],
+          "answer": "Ability to intercept sensitive data"
+        },
+        {
+          "question": "What is another name for this attack?",
+          "options": ["SSL strip or HTTP downgrade", "Phishing", "Buffer Overflow", "XSS"],
+          "answer": "SSL strip or HTTP downgrade"
+        }
+      ]
+    },
+    "downgrade-attack": {
+      "attack_name": "Downgrade Attack",
+      "questions": [
+        {
+          "question": "What does a Downgrade Attack take advantage of?",
+          "options": ["System's backward compatibility", "A fast internet connection", "The user's age", "A high-resolution monitor"],
+          "answer": "System's backward compatibility"
+        },
+        {
+          "question": "Why is backward compatibility a risk?",
+          "options": ["Older versions may be less secure", "It uses too much memory", "It makes the computer look old", "It requires more electricity"],
+          "answer": "Older versions may be less secure"
+        },
+        {
+          "question": "What 'balance' must developers strike?",
+          "options": ["Utility vs. Security", "Price vs. Quality", "Speed vs. Size", "Color vs. Layout"],
+          "answer": "Utility vs. Security"
+        },
+        {
+          "question": "Which of these is a remediation for downgrade attacks?",
+          "options": ["Disabling outdated protocols", "Enabling all protocols", "Using a physical lock", "Clearing the cache"],
+          "answer": "Disabling outdated protocols"
+        },
+        {
+          "question": "Is any system with backward compatibility susceptible?",
+          "options": ["Yes, in general", "No, only Windows", "No, only Linux", "No, only banks"],
+          "answer": "Yes, in general"
+        }
+      ]
+    },
+    "evil-twin": {
+      "attack_name": "Evil Twin",
+      "questions": [
+        {
+          "question": "What does an attacker set up in an Evil Twin attack?",
+          "options": ["A fake Wi-Fi access point", "A physical mirror", "A second monitor", "A new password"],
+          "answer": "A fake Wi-Fi access point"
+        },
+        {
+          "question": "What happens when a user connects to an Evil Twin?",
+          "options": ["Data passes through the attacker's server", "The connection is faster", "The user gets free internet", "The computer shuts down"],
+          "answer": "Data passes through the attacker's server"
+        },
+        {
+          "question": "What device can create an evil twin?",
+          "options": ["Smartphone or internet-capable device", "A toaster", "A physical key", "A printer"],
+          "answer": "Smartphone or internet-capable device"
+        },
+        {
+          "question": "Where are these attacks common?",
+          "options": ["Public settings with free Wi-Fi", "In the user's bedroom", "In a bank vault", "On a submarine"],
+          "answer": "Public settings with free Wi-Fi"
+        },
+        {
+          "question": "What is a recommended personal remediation?",
+          "options": ["Disable auto-connect and use a VPN", "Auto-connect to everything", "Turn off the firewall", "Share your location"],
+          "answer": "Disable auto-connect and use a VPN"
+        }
+      ]
+    },
+    "wi-fi-deauthentication": {
+      "attack_name": "WI-FI Deauthentication",
+      "questions": [
+        {
+          "question": "What is Wi-Fi Deauthentication a form of?",
+          "options": ["Small Denial of Service (DoS)", "SQL Injection", "Phishing", "Shoulder Surfing"],
+          "answer": "Small Denial of Service (DoS)"
+        },
+        {
+          "question": "What does the attack exploit in 802.11 networks?",
+          "options": ["Deauthentication frames", "The physical router casing", "The power cable", "The user's name"],
+          "answer": "Deauthentication frames"
+        },
+        {
+          "question": "Is the attack possible on WPA2-secured networks?",
+          "options": ["Yes, due to management frame gaps", "No, WPA2 is perfectly safe", "Only on Windows", "Only on Sundays"],
+          "answer": "Yes, due to management frame gaps"
+        },
+        {
+          "question": "What can an attacker capture during the handshake?",
+          "options": ["Network packets for brute forcing", "The user's physical photo", "A credit card number", "The router's serial number"],
+          "answer": "Network packets for brute forcing"
+        },
+        {
+          "question": "What feature can be enabled to remediate this?",
+          "options": ["Management Frame Protection (MFP)", "Auto-connect", "Password salting", "A privacy screen"],
+          "answer": "Management Frame Protection (MFP)"
+        }
+      ]
+    },
+    "buffer-overflow": {
+      "attack_name": "Buffer Overflow",
+      "questions": [
+        {
+          "question": "What is a 'Buffer Overflow' condition?",
+          "options": ["Program puts more data in a buffer than it can hold", "The water cooler overflows", "The hard drive is full", "The monitor is too bright"],
+          "answer": "Program puts more data in a buffer than it can hold"
+        },
+        {
+          "question": "What is a 'buffer' in computer memory?",
+          "options": ["A sequential section of memory", "A physical storage bin", "A type of CPU", "A cooling fan"],
+          "answer": "A sequential section of memory"
+        },
+        {
+          "question": "What is a common availability impact of a buffer overflow?",
+          "options": ["Program or device crashes", "The computer gets faster", "The battery lasts longer", "The monitor turns blue"],
+          "answer": "Program or device crashes"
+        },
+        {
+          "question": "What instruction processing risk is associated?",
+          "options": ["Execution of arbitrary malicious code", "Formatting the text correctly", "Speeding up the boot time", "Improving the UI"],
+          "answer": "Execution of arbitrary malicious code"
+        },
+        {
+          "question": "What is a suggested remediation for packets?",
+          "options": ["Implement TTL on received packets", "Increase the buffer size to infinity", "Disable memory", "Delete the code"],
+          "answer": "Implement TTL on received packets"
+        }
+      ]
+    },
+    "race-condition-attack": {
+      "attack_name": "Race Condition",
+      "questions": [
+        {
+          "question": "Where does a Race Condition occur?",
+          "options": ["Concurrent or multi-threaded environments", "In a physical car race", "Only on slow computers", "Only in the BIOS"],
+          "answer": "Concurrent or multi-threaded environments"
+        },
+        {
+          "question": "What property is violated in a race condition?",
+          "options": ["Exclusivity", "Authenticity", "Durability", "Portability"],
+          "answer": "Exclusivity"
+        },
+        {
+          "question": "What does 'Atomicity' mean here?",
+          "options": ["No other thread can execute instructions against the resource simultaneously", "The code is made of atoms", "The code is very small", "The code is split in two"],
+          "answer": "No other thread can execute instructions against the resource simultaneously"
+        },
+        {
+          "question": "Difference between 'trusted' and 'untrusted' interfering sequences?",
+          "options": ["Trusted is within the product; untrusted is from an attacker", "Trusted is from a bank; untrusted is from a person", "Trusted is fast; untrusted is slow", "There is no difference"],
+          "answer": "Trusted is within the product; untrusted is from an attacker"
+        },
+        {
+          "question": "How should a developer remediate this?",
+          "options": ["Use thread-safe functions and synchronization", "Disable multi-threading", "Use only one variable", "Restart the program"],
+          "answer": "Use thread-safe functions and synchronization"
+        }
+      ]
+    },
+    "code-injection": {
+      "attack_name": "Code Injection",
+      "questions": [
+        {
+          "question": "What is the primary cause of Code Injection?",
+          "options": ["Lack of proper input/output data validation", "A physical break-in", "A fast internet connection", "Using too much memory"],
+          "answer": "Lack of proper input/output data validation"
+        },
+        {
+          "question": "How is the scope of a Code Injection limited?",
+          "options": ["By the functionality of the injected language", "By the user's age", "By the size of the monitor", "By the keyboard layout"],
+          "answer": "By the functionality of the injected language"
+        },
+        {
+          "question": "What privilege does an attacker gain if successful?",
+          "options": ["The same privileges as the application", "Administrative rights to the whole internet", "Guest access only", "None"],
+          "answer": "The same privileges as the application"
+        },
+        {
+          "question": "How does it differ from Command Injection?",
+          "options": ["It adds new code to be interpreted", "It is exactly the same", "It only works on Windows", "It requires a physical key"],
+          "answer": "It adds new code to be interpreted"
+        },
+        {
+          "question": "What is the main remediation for Code Injection?",
+          "options": ["Implement input validation", "Use a bigger hard drive", "Disable the internet", "Change the password"],
+          "answer": "Implement input validation"
+        }
+      ]
+    }
+  }
+}
