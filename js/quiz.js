@@ -15,14 +15,6 @@ function getRandomQuestion(questionArray){
     // get a random name from the attack list
     const randomAttack = attackKeys[randomAttackIndex]
 
-    // const attack = attacks[randomAttack]
-
-    // const questions = attack.questions
-    // const randomQuestionIndex = Math.floor(Math.random() * questions.length)
-
-    // const randomQuestion = questions[randomQuestionIndex];
-
-    // return the attack name
     return randomAttack
 }
 
@@ -51,15 +43,6 @@ async function loadQuiz(){
         // get the correct anser for the given question
         const correctAnswer = quizArray[0].attacks_quiz[randomAttack].questions[randomQuestionIndex].answer
 
-        // console.log(questions)
-        // console.log(randomQuestionIndex)
-        // console.log(randomQuestion)
-        // console.log(correctAnswer)
-
-
-    //    console.log(quizArray[0].attacks_quiz[randomAttack].questions[0].answer)
-
-    //   console.log(quizArray[0].attacks_quiz[randomAttack].questions)
 
     }
     catch(error){
