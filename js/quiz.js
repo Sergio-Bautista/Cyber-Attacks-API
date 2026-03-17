@@ -62,7 +62,6 @@ async function loadQuiz(){
         const correctAnswer = randomQuestion.answer
 
         let userOption = ""
-
         randomQuestion.options.forEach(option => {
             const button = document.createElement("button");
             button.textContent = option
@@ -75,7 +74,6 @@ async function loadQuiz(){
 
             optionsContainer.append(button)
         })
-
         questionContainer.append(showQuestion)
 
         console.log(userOption)
@@ -101,9 +99,6 @@ function checkAnswer(userOption, correctAnswer){
     showScore.textContent = score
     loadQuiz()
 }
-
-
-
 
 
 loadQuiz()
