@@ -1,6 +1,6 @@
 // imports json file
-import attacks  from '../json/attacks.json' with { type:'json'};
-import quiz  from '../json/quiz.json' with { type:'json'};
+import attacks  from '../api/json/attacks.json' with { type:'json'};
+import quiz  from '../api/json/quiz.json' with { type:'json'};
 import  express  from 'express';
 
 // lets the server know what external domains are allowed to access it's resources

@@ -20,7 +20,7 @@ async function loadAttacks(){
         const attacksData = await response.json();
 
         // converts the json response to an array 
-        const attacksArray = Object.values(attacksData)
+        const attacksArray = Object.values(attacksData);
 
         const container = document.getElementById('button-container');
 
@@ -29,8 +29,8 @@ async function loadAttacks(){
     
         // creates a button for each attack there is in the response file and displays its name
         attacksArray.forEach(attack =>{
-            const button = document.createElement('button')
-            button.textContent = attack.name  
+            const button = document.createElement('button');
+            button.textContent = attack.name;
              
             // calls the function to display the attack information
             button.addEventListener('click', ()=>{
@@ -43,10 +43,10 @@ async function loadAttacks(){
         
 
     } catch(error) {
-        console.log('Error Loading attack:', error)
-    }
+        console.log('Error Loading attack:', error);
+    };
 
-}
+};
 
 function showAttackInfo(attack){
     const overlay = document.getElementById("overlayInfo");
@@ -58,35 +58,35 @@ function showAttackInfo(attack){
 
     // display the different information from the attack and adds it to the overlay container
     const name = document.createElement("h1");
-    name.textContent = attack.name || placeHolder
+    name.textContent = attack.name || placeHolder;
 
     const category = document.createElement("p");
-    category.textContent = attack.category || placeHolder
+    category.textContent = attack.category || placeHolder;
 
     const risk = document.createElement("span");
-    risk.textContent = `Risk: \n${attack.risk || placeHolder}`
+    risk.textContent = `Risk: \n${attack.risk || placeHolder}`;
 
     const description = document.createElement("p");
     description.style.whiteSpace = "pre-wrap";
-    description.textContent = `Description: \n${attack.description || placeHolder}`
+    description.textContent = `Description: \n${attack.description || placeHolder}`;
 
     const impact = document.createElement("p");
-    impact.textContent = attack.impact || placeHolder
+    impact.textContent = attack.impact || placeHolder;
 
     const myOwnWords = document.createElement("p");
-    myOwnWords.textContent = attack["in simple words"] || "hello"
+    myOwnWords.textContent = attack["in simple words"] || "hello";
 
     const cweID = document.createElement("span");
-    cweID.textContent = attack.cwe_id || placeHolder
+    cweID.textContent = attack.cwe_id || placeHolder;
 
     const remediation = document.createElement("span");
-    remediation.textContent = attack.remediation || placeHolder
+    remediation.textContent = attack.remediation || placeHolder;
 
     const references = document.createElement("span");
-    references.textContent = attack.references || placeHolder
+    references.textContent = attack.references || placeHolder;
 
     const learnMore = document.createElement("span");
-    learnMore.textContent = attack["learn more"] || placeHolder
+    learnMore.textContent = attack["learn more"] || placeHolder;
 
 
     // creates a close button for the overlay container
@@ -107,4 +107,4 @@ function showAttackInfo(attack){
 }
 
 // calls the function
-loadAttacks()
+loadAttacks();

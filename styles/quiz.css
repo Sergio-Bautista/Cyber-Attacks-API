@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* buttons for the options */
 #options > button{
     padding: 15px;
     font-size: 20px;
@@ -9,25 +10,24 @@
     transition: all .25s;
 }
 
+/* creates a 2x2 display for the options */
 #options{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: 10px;
-
     max-width: 400px;
     margin: 0 auto;
 }
 
+/* for smaller screens */
 @media (max-width: 500px) {
     #options-container {
         grid-template-columns: 1fr; 
     }
 } 
-
-
+/* change the style of the button when hovered or when clicked */
 button:hover{
-    /* background-color: #eee; */
+    background-color: #eee;
     border: 3px solid black;
     letter-spacing: 2px;
     
