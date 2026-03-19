@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+#options > button{
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+#options{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+    #options-container {
+        grid-template-columns: 1fr; 
+    }
+} 
+
+
+button:hover{
+    /* background-color: #eee; */
+    border: 3px solid black;
+    letter-spacing: 2px;
+    
+}
+
+button:active{
+    transform: scale(1.2);
+} 
