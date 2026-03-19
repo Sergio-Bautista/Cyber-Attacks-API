@@ -3,7 +3,6 @@
 let score = 0;
 let numberOfQuestions = 0;
 
-
 // access the containers for the questions/options
 const questionContainer = document.getElementById("question-container");
 const optionsContainer = document.getElementById("options");
@@ -36,7 +35,7 @@ function getRandomQuestion(questionArray){
     // get only the name of the attack from the json file
     const attackKeys = Object.keys(attacks);
 
-    // generate a random number to return a ransom name from the json file
+    // generate a random number to return a random name from the json file
     const randomAttackIndex = Math.floor(Math.random() * attackKeys.length);
 
     // get a random name from the attack list
