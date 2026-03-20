@@ -2,22 +2,59 @@
 // initializes the user score and tracks number of questions answered
 let score = 0;
 let numberOfQuestions = 0;
+let reviewQuestions = [];
 
 // access the containers for the questions/options
 const questionContainer = document.getElementById("question-container");
 const optionsContainer = document.getElementById("options");
 const buttonNumber = document.querySelector("button");
 
+const reviewContainerQuestion = document.getElementById("review-container-question")
+const reviewContainerOptions = document.getElementById("review-container-options")
+
+
 // loads the main function
 buttonNumber.addEventListener('click', loadQuiz);
 
 // checks if the questions answered is equal to the questions the user wanted
-function checkMaxQuestions(questionsNumber){
+function checkMaxQuestions(questionsNumber, userOption){
     // TODO
     // implement an overlay screen with score and questions wrong
-    // console.log(questionsNumber)
-    if(numberOfQuestions == questionsNumber){
+    console.log(numberOfQuestions)
+    if(numberOfQuestions === Number(questionsNumber)){
         console.log("end quiz here");
+
+        reviewQuestions.forEach(question =>{
+            const correctAnswer = question.answer            
+            const showReviewQuestion = document.createElement('h2');
+            
+
+            console.log(correctAnswer);
+            // console.log(userOption);
+
+
+            showReviewQuestion.textContent = question.question;
+            
+            if(question.answerCorrectly){
+                showReviewQuestion.classList.add("rightQuestion");
+            }else{
+                showReviewQuestion.classList.add("wrongQuestion");
+            };
+
+            reviewContainerQuestion.append(showReviewQuestion)
+            
+            question.options.forEach(option =>{
+                const reviewOption = document.createElement('div')
+                reviewOption.textContent = option
+                reviewOption.style.border = "1px solid black"
+                // reviewOptionButton.style.display = "flex"
+                reviewContainerQuestion.append(reviewOption)
+            })
+
+        });
+        
+
+        
     };
 };
 
@@ -25,6 +62,7 @@ function checkMaxQuestions(questionsNumber){
 function clearScreen(){
     questionContainer.textContent = "";
     optionsContainer.textContent = "";
+    // reviewQuestions = [];
 };
 
 // Function to generate and return a random attack name
@@ -72,6 +110,8 @@ async function loadQuiz(){
 
         // select a question from the array
         const randomQuestion = questions[randomQuestionIndex];
+        // reviewQuestions.push(randomQuestion);
+
 
         // get the correct anser for the given question (just in case)
         const showCorrectAnswer = randomQuestion.answer;
@@ -97,13 +137,15 @@ async function loadQuiz(){
                 userOption = this.textContent || "no option";
 
                 // calls the function to check if the user has reach the number of questions wanted
-                checkAnswer(userOption, correctAnswer, questionsNumber);
+                checkAnswer(userOption, correctAnswer, questionsNumber, randomQuestion);
             });
             // appends the buttons to the option container for display 
             optionsContainer.append(button);
         });
         // appends the questions to the question container for display
         questionContainer.append(showQuestion);
+
+
     }
     // logs if there is an error 
     catch(error){
@@ -112,26 +154,28 @@ async function loadQuiz(){
 };
 
 // keeps track of user score, checks if the questions limits has been reached, and loads the next question
-function checkAnswer(userOption, correctAnswer, questionsNumber){
+function checkAnswer(userOption, correctAnswer, questionsNumber, randomQuestion){
     // access the score of the user for display
     let showScore = document.getElementById("score");
     
     // checks if the user got the question correct and adds/subtracts pints from user score
     //  TODO: Implement a better score system
+    
+    randomQuestion.answerCorrectly = userOption == correctAnswer;
+
     if(userOption === correctAnswer){
         score+=10;
     }else{
         score-=1;
     };
+    reviewQuestions.push(randomQuestion)
     // adds one to the number of questions
     numberOfQuestions += 1;
     // shows the score in the scree
     showScore.textContent = score;
-    // console.log("user #",Number(questionsNumber))
-    // console.log("#Qs", numberOfQuestions)
 
     // check if the number of questions has been reached
-    checkMaxQuestions(questionsNumber);
+    checkMaxQuestions(questionsNumber, randomQuestion, userOption);
     // calls the main function to load a new question
     loadQuiz();
 };
