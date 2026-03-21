@@ -1,6 +1,8 @@
 // imports json file
-import attacks  from '../api/json/attacks.json' with { type:'json'};
-import quiz  from '../api/json/quiz.json' with { type:'json'};
+// import attacks  from '../api/json/attacks.json' with { type:'json'};
+import attacks  from './json/attacks.json' with { type:'json'};
+// import quiz  from '../api/json/quiz.json' with { type:'json'};
+import quiz  from './json/quiz.json' with { type:'json'};
 import  express  from 'express';
 
 // lets the server know what external domains are allowed to access it's resources
@@ -33,6 +35,11 @@ app.get("/quiz", (req, res) =>{
 
 
 // makes the server listen to the specified port 
-app.listen(PORT, ()=>{
-    console.log(`Server running on port ${PORT}`);
+// app.listen(process.env.PORT || PORT, ()=>{
+//     console.log(`Server running on port ${PORT}`);
+// });
+
+const ACTUAL_PORT = process.env.PORT || PORT;
+app.listen(ACTUAL_PORT, () => {
+    console.log(`Server running on port ${ACTUAL_PORT}`);
 });

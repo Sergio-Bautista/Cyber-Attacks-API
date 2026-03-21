@@ -1,9 +1,13 @@
 {
   "name": "api-attacks-project",
   "version": "1.0.0",
+  "engines":{
+    "node": ">=20.10.0"
+  },
   "description": "",
-  "main": "index.js",
+  "main": "api/server.js",
   "scripts": {
+    "start": "api/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
