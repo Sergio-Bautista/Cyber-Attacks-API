@@ -1,4 +1,3 @@
-
 // initializes the user score and tracks number of questions answered
 let score = 0;
 let numberOfQuestions = 0;
@@ -8,53 +7,55 @@ let reviewQuestions = [];
 const questionContainer = document.getElementById("question-container");
 const optionsContainer = document.getElementById("options");
 const buttonNumber = document.querySelector("button");
-
 const reviewContainerQuestion = document.getElementById("review-container-question")
 const reviewContainerOptions = document.getElementById("review-container-options")
-
 
 // loads the main function
 buttonNumber.addEventListener('click', loadQuiz);
 
 // checks if the questions answered is equal to the questions the user wanted
-function checkMaxQuestions(questionsNumber, userOption){
+function checkMaxQuestions(questionsNumber){
     // TODO
     // implement an overlay screen with score and questions wrong
-    console.log(numberOfQuestions)
+    
+    // checks if the the questions answered is equal to the user's chosen number
     if(numberOfQuestions === Number(questionsNumber)){
-        console.log("end quiz here");
-
+        // iterates through the questions the user has answered
         reviewQuestions.forEach(question =>{
+            // gets the correct answer for the question
             const correctAnswer = question.answer            
+
+            // creates an h2 element to display the question answered for review and adds it to the container
             const showReviewQuestion = document.createElement('h2');
-            
-
-            console.log(correctAnswer);
-            // console.log(userOption);
-
-
             showReviewQuestion.textContent = question.question;
-            
-            if(question.answerCorrectly){
-                showReviewQuestion.classList.add("rightQuestion");
-            }else{
-                showReviewQuestion.classList.add("wrongQuestion");
-            };
-
             reviewContainerQuestion.append(showReviewQuestion)
             
+            // iterates through each question's options 
             question.options.forEach(option =>{
+
+                // creates a div element to display the options for each question
                 const reviewOption = document.createElement('div')
                 reviewOption.textContent = option
-                reviewOption.style.border = "1px solid black"
-                // reviewOptionButton.style.display = "flex"
+                
+                // adds a green border to the correct option 
+                if (option == correctAnswer){
+                    reviewOption.style.border = '2px solid green'
+                }
+                
+                // checks for the flag and add the class to the element
+                if(question.answerCorrectly){
+                    showReviewQuestion.classList.add("rightQuestion");
+                }else{
+                    showReviewQuestion.classList.add("wrongQuestion");
+                    // adds a blue border to the option chosen if the answer is wrong
+                    if(option == question.userAnswer){
+                        reviewOption.style.border = "2px solid blue"
+                    }
+                };
+                // adds the options to the container
                 reviewContainerQuestion.append(reviewOption)
             })
-
         });
-        
-
-        
     };
 };
 
@@ -64,7 +65,6 @@ function clearScreen(){
     optionsContainer.textContent = "";
     // reviewQuestions = [];
 };
-
 // Function to generate and return a random attack name
 function getRandomQuestion(questionArray){
     // get the attacks name from the API
@@ -92,8 +92,10 @@ async function loadQuiz(){
     // calls the clear function every time to place the new question/options
     clearScreen()
     try{
-        // Makes the request to the API server 
-        const response = await fetch("http://localhost:8000/quiz");
+        // Makes the request to the API server locally 
+        // const response = await fetch("http://localhost:8000/quiz");
+        // Makes the request to the API when is hosted in railways
+        const response = await fetch("https://cyber-attacks-api-production.up.railway.app/quiz")
 
         // Save the json response and converts it into an array
         const quizData = await response.json();
@@ -110,8 +112,6 @@ async function loadQuiz(){
 
         // select a question from the array
         const randomQuestion = questions[randomQuestionIndex];
-        // reviewQuestions.push(randomQuestion);
-
 
         // get the correct anser for the given question (just in case)
         const showCorrectAnswer = randomQuestion.answer;
@@ -123,9 +123,6 @@ async function loadQuiz(){
         // get the correct answer for comparison
         const correctAnswer = randomQuestion.answer;
 
-        // initializes the user option
-        let userOption = "";
-
         // loops thorough the options of a given question 
         randomQuestion.options.forEach(option => {
             // and creates a button with each option in it
@@ -134,7 +131,9 @@ async function loadQuiz(){
 
             // adds an event listener to each button, and assigns the content of the button to the user's options
             button.addEventListener('click', function(){
-                userOption = this.textContent || "no option";
+                // adds content of the button to the user option and adds it to the question object 
+                const userOption = this.textContent || "no option";
+                randomQuestion.userAnswer = userOption
 
                 // calls the function to check if the user has reach the number of questions wanted
                 checkAnswer(userOption, correctAnswer, questionsNumber, randomQuestion);
@@ -144,26 +143,22 @@ async function loadQuiz(){
         });
         // appends the questions to the question container for display
         questionContainer.append(showQuestion);
-
-
     }
     // logs if there is an error 
     catch(error){
         console.log("Error loading quiz: ", error);
     };
 };
-
 // keeps track of user score, checks if the questions limits has been reached, and loads the next question
 function checkAnswer(userOption, correctAnswer, questionsNumber, randomQuestion){
     // access the score of the user for display
     let showScore = document.getElementById("score");
-    
-    // checks if the user got the question correct and adds/subtracts pints from user score
     //  TODO: Implement a better score system
+    // adds a boolean property value to the question object 
+    randomQuestion.answerCorrectly = userOption === correctAnswer
     
-    randomQuestion.answerCorrectly = userOption == correctAnswer;
-
-    if(userOption === correctAnswer){
+    // checks if the answer is correct or not to add points
+    if(userOption == correctAnswer){
         score+=10;
     }else{
         score-=1;
@@ -175,7 +170,7 @@ function checkAnswer(userOption, correctAnswer, questionsNumber, randomQuestion)
     showScore.textContent = score;
 
     // check if the number of questions has been reached
-    checkMaxQuestions(questionsNumber, randomQuestion, userOption);
+    checkMaxQuestions(questionsNumber, userOption);
     // calls the main function to load a new question
     loadQuiz();
 };
