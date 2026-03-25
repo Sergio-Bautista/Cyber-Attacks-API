@@ -4,22 +4,19 @@ let numberOfQuestions = 0;
 let reviewQuestions = [];
 
 // access the containers for the questions/options
+const showScore = document.getElementById("score");
 const questionContainer = document.getElementById("question-container");
-let showScore = document.getElementById("score");
 const optionsContainer = document.getElementById("options");
 const buttonNumber = document.querySelector("button");
 const reviewContainerQuestion = document.getElementById("review-container-question")
 const overlay = document.getElementById("overlayInfo");
-// const retryWrongQuestions = document.createElement('button');
 const closeBtn = document.createElement("button");
-
 
 closeBtn.addEventListener('click', ()=>{
     clearEverything()
 })
 // loads the main function
 buttonNumber.addEventListener('click', loadQuiz);
-// retryWrongQuestions.addEventListener('click', retryWrongQuestionsOnly)
 
 function clearEverything(){
     // console.log("everything cleared")
@@ -39,27 +36,13 @@ function clearEverything(){
 
 function displayQuestionsAndAnswers(questionsNumber){
     if(numberOfQuestions === Number(questionsNumber)){
-        // const overlay = document.getElementById("overlayInfo");
-        // const closeBtn = document.createElement("button");
+
         closeBtn.className = 'close-button';
         closeBtn.textContent = "close";
-
-        // const retryWrongQuestions = document.createElement('button');
-        // retryWrongQuestions.textContent = 'Retry Wrong Questions';
-        
-        // closeBtn.addEventListener('click', ()=>{
-        //     // overlay.style.display = 'none';
-        //     clearEverything()
-        // })
-        // retryWrongQuestions.addEventListener('click', retryWrongQuestionsOnly)
-
         reviewContainerQuestion.textContent = "";
         
         // iterates through the questions the user has answered
         reviewQuestions.forEach(question =>{
-            // gets the correct answer for the question
-            // const correctAnswer = question.answer            
-
             // creates an h2 element to display the question answered for review and adds it to the container
             const showReviewQuestion = document.createElement('h2');
             showReviewQuestion.textContent = question.question;
@@ -67,34 +50,10 @@ function displayQuestionsAndAnswers(questionsNumber){
         
             // iterates through each question's options 
             question.options.forEach(option =>{
-                
-
                 // creates a div element to display the options for each question
                 const reviewOption = document.createElement('div')
                 reviewOption.textContent = option
-                
-                // reviewOption.style.textAlign = 'center'
 
-                // adds a green border to the correct option 
-                if (option === question.answer ){
-                    reviewOption.style.border = '2px solid green'
-                }
-                
-                // checks for the flag and add the class to the element
-                if(question.answerCorrectly){
-                    showReviewQuestion.classList.add("rightQuestion");
-                }else{
-                    showReviewQuestion.classList.add("wrongQuestion");
-                    // adds a blue border to the option chosen if the answer is wrong
-                    const optionIndex = question.options.indexOf(option);
-
-                    if (!question.answerCorrectly && optionIndex === question.userAnswerIndex) {
-                        reviewOption.style.border = "2px solid blue";
-                    }
-                    // if(option == question.userAnswer){
-                    //     reviewOption.style.border = "2px solid blue"
-                    // }
-                };
                 // adds the options to the container
                 reviewContainerQuestion.append(reviewOption)
             })
@@ -102,48 +61,33 @@ function displayQuestionsAndAnswers(questionsNumber){
         overlay.append(reviewContainerQuestion)
         overlay.append(showScore)
         overlay.append(closeBtn)
-        overlay.append(retryWrongQuestions)
-        overlay.style.display = "flex"
     };
 }
-function retryWrongQuestionsOnly(){
-    console.log("These are the questions you got wrong")
-    const wrongReviewQuestions = reviewQuestions.filter(question =>{
-       return question.answerCorrectly !== true;    
-    })
-    console.log(wrongReviewQuestions)
-    clearEverything()
+// review the questions that your got wrong only (future)
+// function retryWrongQuestionsOnly(){
+//     console.log("These are the questions you got wrong")
+//     const wrongReviewQuestions = reviewQuestions.filter(question =>{
+//        return question.answerCorrectly !== true;    
+//     })
+//     console.log(wrongReviewQuestions)
+//     clearEverything()
 
-}
+// }
 
 // checks if the questions answered is equal to the questions the user wanted
 function checkMaxQuestions(questionsNumber){
     // checks if the the questions answered is equal to the user's chosen number
     if(numberOfQuestions === Number(questionsNumber)){
-        // const overlay = document.getElementById("overlayInfo");
-        // const closeBtn = document.createElement("button");
-        // overlay.style.display = 'flex';
+        // prevents the background to scroll when overlay is displayed
         document.body.classList.add('no-scroll')
         closeBtn.className = 'close-button';
         closeBtn.textContent = "close";
-
-        // const retryWrongQuestions = document.createElement('button');
-        // retryWrongQuestions.textContent = 'Retry Wrong Questions';
-        
-        // closeBtn.addEventListener('click', ()=>{
-        //     // overlay.style.display = 'none';
-        //     clearEverything()
-        // })
-        // retryWrongQuestions.addEventListener('click', retryWrongQuestionsOnly)
-
         reviewContainerQuestion.textContent = "";
         
         // iterates through the questions the user has answered
         reviewQuestions.forEach(question =>{
-            // gets the correct answer for the question
-            // const correctAnswer = question.answer            
 
-
+            // creates a div to add each question/options
             const questionBox = document.createElement('div');
             questionBox.className = 'review-question-set'
 
@@ -151,7 +95,7 @@ function checkMaxQuestions(questionsNumber){
             const showReviewQuestion = document.createElement('h2');
             showReviewQuestion.textContent = question.question;
 
-
+            // appends the div with question/option to the overlay
             questionBox.append(showReviewQuestion)
             
             // iterates through each question's options 
@@ -163,7 +107,7 @@ function checkMaxQuestions(questionsNumber){
                 
                 // adds a green border to the correct option 
                 if (option === question.answer ){
-                    reviewOption.classList.add("correctOption")                       
+                    reviewOption.classList.add("correctOption")    
                 }                
                 // checks for the flag and add the class to the element
                 else if(question.answerCorrectly){
@@ -171,29 +115,23 @@ function checkMaxQuestions(questionsNumber){
                 }else{
                     showReviewQuestion.classList.add("wrongQuestion");
                     reviewOption.classList.add("wrongOption")
-                    // adds a blue border to the option chosen if the answer is wrong
                     const optionIndex = question.options.indexOf(option);
-
+                    
+                    // adds a blue border to the option chosen if the answer is wrong
                     if (!question.answerCorrectly && optionIndex === question.userAnswerIndex) {
                         reviewOption.classList.add('userAnswer')
                         reviewOption.classList.toggle("wrongOption")
                     }
                 };
-
                 // adds the options to the container
                 questionBox.append(reviewOption)
-                // reviewContainerQuestion.append(reviewOption)
             })
             reviewContainerQuestion.append(questionBox)
-            // reviewContainerQuestion.classList.add("ShowReviewContainer")
         });
-        // const allButtons = document.querySelectorAll('#options button');
-        // allButtons.forEach(btn => btn.disabled = true);
-
         overlay.append(reviewContainerQuestion)
         overlay.append(showScore)
         overlay.append(closeBtn)
-        // overlay.append(retryWrongQuestions)
+        // allows the overlay to be showed 
         overlay.style.display = "flex"
     };
 };
@@ -298,24 +236,20 @@ async function loadQuiz(){
 // keeps track of user score, checks if the questions limits has been reached, and loads the next question
 function checkAnswer(userIndex, questionsNumber, randomQuestion){
     
-    //  TODO: Implement a better score system
     // adds a boolean property value to the question object 
     const correctIndex = randomQuestion.options.indexOf(randomQuestion.answer)
     randomQuestion.answerCorrectly = userIndex === correctIndex;
 
-    // randomQuestion.answerCorrectly = 
-    // userOption.trim().toLowerCase() === 
-    // randomQuestion.answer.trim().toLowerCase();
-    
     // checks if the answer is correct or not to add points
     if(randomQuestion.answerCorrectly){
         score+=10;
     }else{
         score-=1;
     };
-    // console.log("Before push:", reviewQuestions);
+
+    // pushes the question answered to the review question array
     reviewQuestions.push(randomQuestion)
-    // console.log("After push:", reviewQuestions);
+    
     // adds one to the number of questions
     numberOfQuestions ++;
     // shows the score in the scree
