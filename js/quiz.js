@@ -25,13 +25,16 @@ function clearEverything(){
     // console.log("everything cleared")
     reviewQuestions.length = 0;
     score = 0;
-    numberOfQuestions = 0;
+    numberOfQuestions = 0;const allButtons = document.querySelectorAll('#options button');
+        // allButtons.forEach(btn => btn.disabled = true);
     buttonNumber.style.display = ""
     document.querySelector("input").style.display = ''
+    document.querySelector("h1").style.display = ''
     questionContainer.textContent = "";
     optionsContainer.textContent = "";
     reviewContainerQuestion.textContent = "";
     overlay.style.display = 'none'
+    document.body.classList.remove('no-scroll')
 }
 
 function displayQuestionsAndAnswers(questionsNumber){
@@ -42,7 +45,7 @@ function displayQuestionsAndAnswers(questionsNumber){
         closeBtn.textContent = "close";
 
         // const retryWrongQuestions = document.createElement('button');
-        retryWrongQuestions.textContent = 'Retry Wrong Questions';
+        // retryWrongQuestions.textContent = 'Retry Wrong Questions';
         
         // closeBtn.addEventListener('click', ()=>{
         //     // overlay.style.display = 'none';
@@ -61,14 +64,17 @@ function displayQuestionsAndAnswers(questionsNumber){
             const showReviewQuestion = document.createElement('h2');
             showReviewQuestion.textContent = question.question;
             reviewContainerQuestion.append(showReviewQuestion)
-            
+        
             // iterates through each question's options 
             question.options.forEach(option =>{
+                
 
                 // creates a div element to display the options for each question
                 const reviewOption = document.createElement('div')
                 reviewOption.textContent = option
                 
+                // reviewOption.style.textAlign = 'center'
+
                 // adds a green border to the correct option 
                 if (option === question.answer ){
                     reviewOption.style.border = '2px solid green'
@@ -116,6 +122,8 @@ function checkMaxQuestions(questionsNumber){
     if(numberOfQuestions === Number(questionsNumber)){
         // const overlay = document.getElementById("overlayInfo");
         // const closeBtn = document.createElement("button");
+        // overlay.style.display = 'flex';
+        document.body.classList.add('no-scroll')
         closeBtn.className = 'close-button';
         closeBtn.textContent = "close";
 
@@ -135,42 +143,53 @@ function checkMaxQuestions(questionsNumber){
             // gets the correct answer for the question
             // const correctAnswer = question.answer            
 
+
+            const questionBox = document.createElement('div');
+            questionBox.className = 'review-question-set'
+
             // creates an h2 element to display the question answered for review and adds it to the container
             const showReviewQuestion = document.createElement('h2');
             showReviewQuestion.textContent = question.question;
-            reviewContainerQuestion.append(showReviewQuestion)
+
+
+            questionBox.append(showReviewQuestion)
             
             // iterates through each question's options 
             question.options.forEach(option =>{
-
                 // creates a div element to display the options for each question
                 const reviewOption = document.createElement('div')
-                reviewOption.textContent = option
+                reviewOption.textContent = option;
+                reviewOption.className = "review-option-item";
                 
                 // adds a green border to the correct option 
                 if (option === question.answer ){
-                    reviewOption.style.border = '2px solid green'
-                }
-                
+                    reviewOption.classList.add("correctOption")                       
+                }                
                 // checks for the flag and add the class to the element
-                if(question.answerCorrectly){
+                else if(question.answerCorrectly){
                     showReviewQuestion.classList.add("rightQuestion");
                 }else{
                     showReviewQuestion.classList.add("wrongQuestion");
+                    reviewOption.classList.add("wrongOption")
                     // adds a blue border to the option chosen if the answer is wrong
                     const optionIndex = question.options.indexOf(option);
 
                     if (!question.answerCorrectly && optionIndex === question.userAnswerIndex) {
-                        reviewOption.style.border = "2px solid blue";
+                        reviewOption.classList.add('userAnswer')
+                        reviewOption.classList.toggle("wrongOption")
                     }
-                    // if(option == question.userAnswer){
-                    //     reviewOption.style.border = "2px solid blue"
-                    // }
                 };
+
                 // adds the options to the container
-                reviewContainerQuestion.append(reviewOption)
+                questionBox.append(reviewOption)
+                // reviewContainerQuestion.append(reviewOption)
             })
+            reviewContainerQuestion.append(questionBox)
+            // reviewContainerQuestion.classList.add("ShowReviewContainer")
         });
+        // const allButtons = document.querySelectorAll('#options button');
+        // allButtons.forEach(btn => btn.disabled = true);
+
         overlay.append(reviewContainerQuestion)
         overlay.append(showScore)
         overlay.append(closeBtn)
@@ -185,6 +204,7 @@ function clearScreen(){
     optionsContainer.textContent = "";
     buttonNumber.style.display = "none"
     document.querySelector("input").style.display = 'none'
+    document.querySelector("h1").style.display = 'none'
 };
 // Function to generate and return a random attack name
 function getRandomQuestion(questionArray){
