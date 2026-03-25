@@ -10,26 +10,35 @@ body {
     min-height: 100vh;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 #question-container {
     text-align: center;
     max-width: 400px;
     margin: 0 auto 20px;  
+    border-radius: 30px;
+    border: 1px solid black;
 }
 
 #question-container h2 {
-    margin: 0; 
+    margin: 0 auto; 
     font-size: 2.2rem;   /* Adjust size to fit your design */
 }
 
 /* buttons for the options */
 #options  button{
+    border-radius: 20px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 1);   
     padding: 15px;
     width: 100%;
     font-size: 20px;
     cursor: pointer;
     transition: all .25s;
     position: relative;
-    padding-right: 40px;
+    /* padding-right: 40px; */
+    font-size: 1.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +50,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     max-width: 400px;
-    margin: 0 auto;
 }
 
 /* for smaller screens */
@@ -61,16 +69,49 @@ button:active{
     transform: scale(1.2);
 } 
 
+.correctOption{
+    background-color: green !important;
+    color: white;
+}
+.correctOption::after{
+    content: "✔"; 
+    position: absolute;
+    right: -35px;
+    font-weight: bold;
+}
+
+.wrongOption{
+    background-color: red;
+    color: white;
+}
+.userAnswer{
+    background-color: blue;
+    color: white;
+}
+.userAnswer::after{
+    content: "👈"; 
+    position: absolute;
+    right: -35px;
+    font-weight: bold;
+}
+
+.wrongOption::after{
+    content: "✖"; 
+    position: absolute;
+    right: -35px;
+    font-weight: bold;
+}
+
 .wrongQuestion{
     background-color: #dc3545 !important; /* Red */
     color: white;
 }
-.wrongQuestion::after{
-    content: "✖"; /* X icon */
+/* .wrongQuestion::after{
+    content: "✖"; 
     position: absolute;
     right: 15px;
     font-weight: bold;
-}
+} */
 
 .rightQuestion{
     background-color: #28a745 !important; /* Green */
@@ -84,7 +125,7 @@ button:active{
 }
 
 .close-button {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     padding: 10px 20px;
     cursor: pointer;
     background: #ff4444;
@@ -95,18 +136,60 @@ button:active{
 
 .overlay {
     font-size: 25px;
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    background-color: #222; 
     color: white;
-    
-    /* Center the content */
+   
     flex-direction: column;
     justify-content: center;
+   
+    z-index: 9999; 
+    overflow-y: auto;
+    padding: 50px 0;
+    flex-direction: column;
     align-items: center;
-    z-index: 1000; /* Sit on top of everything */
+
+}
+
+.overlay {
+    /* ... keep your other settings ... */
+    display: none; 
+    justify-content: flex-start; /* IMPORTANT: Changed from center to flex-start */
+    align-items: center;
+}
+
+.review-question-set {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 50px; /* SPACE BETWEEN QUESTIONS */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+#review-container-question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.rightQuestion, .wrongQuestion, .review-option-item {
+    width: fit-content;
+    border-radius: 20px;
+    min-width: 280px; /* Optional: stops them from being too skinny */
+    padding: 10px 25px;
+    margin: 4px auto;
+    text-align: center;
+    position: relative; /* For the icons */
+    
+}
+
+.review-option-item{
+    box-shadow: 7px 7px 3px lightblue;
+
 }
